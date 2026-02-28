@@ -689,7 +689,7 @@ const GetInvolvedPage: React.FC = () => {
             <div className="gi-fr2">
               <div className="gi-fld">
                 <label><img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=40&h=40&fit=crop" alt="" />Phone Number <span className="req">*</span></label>
-                <input name="phone" value={formData.phone} onChange={handleChange} type="tel" placeholder="+91 98765 43210" className={`gi-inp ${errors.phone?'er':''}`} />
+                <input name="phone" value={formData.phone} onChange={handleChange} type="tel" placeholder="+919999999999" className={`gi-inp ${errors.phone?'er':''}`} />
                 {errors.phone && <span className="gi-em">⚠ {errors.phone}</span>}
               </div>
               <div className="gi-fld">

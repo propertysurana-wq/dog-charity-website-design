@@ -152,7 +152,7 @@ const CommunitySupportPage: React.FC = () => {
             <div className="flex items-center gap-3">
               <Phone className="w-8 h-8 text-navy-900" />
               <div className="text-left">
-                <p className="text-navy-900 font-bold text-xl">+91 98765 43210</p>
+                <p className="text-navy-900 font-bold text-xl">+919999999999</p>
                 <p className="text-navy-800 text-sm">Call or WhatsApp</p>
               </div>
             </div>
@@ -391,7 +391,7 @@ const CommunitySupportPage: React.FC = () => {
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-yellow-400 text-navy-900 font-bold rounded-lg hover:bg-yellow-300 transition-colors"
               >
                 <Phone className="w-5 h-5" />
-                +91 98765 43210
+                +919999999999
               </a>
               <a 
                 href="https://wa.me/919876543210"

@@ -577,7 +577,7 @@ const AboutUsNewPage: React.FC = () => {
                     <Phone className="w-6 h-6 text-yellow-600 flex-shrink-0" />
                     <div>
                       <p className="font-semibold text-gray-900">Phone</p>
-                      <p className="text-gray-600">+91 98765 43210 (Helpline)</p>
+                      <p className="text-gray-600">+919999999999 (Helpline)</p>
                       <p className="text-gray-600">+91 98765 43211 (Emergency)</p>
                     </div>
                   </div>

@@ -107,7 +107,7 @@
 // // // //                 className="flex items-center gap-2 hover:text-yellow-400 transition-colors"
 // // // //               >
 // // // //                 <Phone className="w-4 h-4" />
-// // // //                 <span>Emergency: +91 98765 43210</span>
+// // // //                 <span>Emergency: +919999999999</span>
 // // // //               </a>
 // // // //               <span className="text-gray-400">|</span>
 // // // //               <span>24/7 Rescue Helpline</span>
@@ -236,7 +236,7 @@
 // // // //               className="flex items-center gap-2 px-4 py-3 bg-red-50 text-red-600 rounded-lg mb-4 font-medium"
 // // // //             >
 // // // //               <Phone className="w-5 h-5" />
-// // // //               Emergency: +91 98765 43210
+// // // //               Emergency: +919999999999
 // // // //             </a>
 
 // // // //             {/* Nav Items - Mobile */}
@@ -414,7 +414,7 @@
 // // //                 className="flex items-center gap-1.5 hover:text-yellow-400 transition-colors"
 // // //               >
 // // //                 <Phone className="w-3 h-3" />
-// // //                 <span>Emergency: +91 98765 43210</span>
+// // //                 <span>Emergency: +919999999999</span>
 // // //               </a>
 // // //               <span className="text-gray-400">|</span>
 // // //               <span>24/7 Rescue Helpline</span>
@@ -543,7 +543,7 @@
 // // //               className="flex items-center gap-2 px-4 py-3 bg-red-50 text-red-600 rounded-lg mb-4 font-medium text-sm" // ✅ text-sm
 // // //             >
 // // //               <Phone className="w-4 h-4" />
-// // //               Emergency: +91 98765 43210
+// // //               Emergency: +919999999999
 // // //             </a>
 
 // // //             {/* Nav Items - Mobile */}
@@ -719,7 +719,7 @@
 // //                 className="flex items-center gap-1.5 hover:text-yellow-400 transition-colors"
 // //               >
 // //                 <Phone className="w-3 h-3" />
-// //                 <span>Emergency: +91 98765 43210</span>
+// //                 <span>Emergency: +919999999999</span>
 // //               </a>
 // //               <span className="text-gray-400">|</span>
 // //               <span>24/7 Rescue Helpline</span>
@@ -866,7 +866,7 @@
 // //               className="flex items-center gap-2 px-4 py-3 bg-red-50 text-red-600 rounded-lg mb-4 font-medium text-sm" // ✅ text-sm
 // //             >
 // //               <Phone className="w-4 h-4" />
-// //               Emergency: +91 98765 43210
+// //               Emergency: +919999999999
 // //             </a>
 
 // //             {/* Nav Items - Mobile */}
@@ -1035,7 +1035,7 @@
 //                 className="flex items-center gap-1.5 hover:text-yellow-400 transition-colors font-medium"
 //               >
 //                 <Phone size={12} />
-//                 <span>Emergency: +91 98765 43210</span>
+//                 <span>Emergency: +919999999999</span>
 //               </a>
 //               <span className="text-gray-500">|</span>
 //               <span className="text-gray-300">24/7 Rescue Helpline</span>
@@ -1176,7 +1176,7 @@
 //               className="flex items-center gap-2 px-4 py-3 bg-red-50 text-red-600 rounded-xl mb-4 font-semibold text-sm"
 //             >
 //               <Phone size={16} />
-//               Emergency: +91 98765 43210
+//               Emergency: +919999999999
 //             </a>
 
 //             {/* Nav Items */}
@@ -1342,7 +1342,7 @@
 //                 className="flex items-center gap-1.5 hover:text-yellow-400 transition-colors font-medium"
 //               >
 //                 <Phone size={12} />
-//                 <span>Emergency: +91 98765 43210</span>
+//                 <span>Emergency: +919999999999</span>
 //               </a>
 //               <span className="text-gray-500">|</span>
 //               <span className="text-gray-300">24/7 Rescue Helpline</span>
@@ -1486,7 +1486,7 @@
 //               className="flex items-center gap-2 px-4 py-3 bg-red-50 text-red-600 rounded-xl mb-4 font-semibold text-sm"
 //             >
 //               <Phone size={16} />
-//               Emergency: +91 98765 43210
+//               Emergency: +919999999999
 //             </a>
 
 //             {/* Nav Items */}
@@ -1790,7 +1790,7 @@
 //               className="flex items-center gap-2 px-4 py-3 bg-blue-50 text-blue-600 rounded-xl mb-4 font-semibold text-base" // ✅ Changed color + text-sm → text-base
 //             >
 //               <Phone size={17} />
-//               Call Now: +91 98765 43210
+//               Call Now: +919999999999
 //             </a>
 
 //             {/* Nav Items */}

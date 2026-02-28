@@ -12,7 +12,7 @@ export const orgInfo = {
   name: 'Suranango for Dogs',
   tagline: 'Giving Every Dog a Loving Home',
   address: '123 Dog Welfare Street, Surana Nagar, Rajasthan - 302001',
-  phone: '+91 98765 43210',
+  phone: '+919999999999',
   email: 'info@suranaNGO.org',
   foundedYear: '2010',
 };

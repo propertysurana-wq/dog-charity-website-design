@@ -460,7 +460,7 @@ const orgInfo = {
   tagline: 'Every Dog Deserves a Loving Home',
   foundedYear: 2010,
   address: 'Surana Nagar, Jaipur, Rajasthan 302001',
-  phone: '+91 98765 43210',
+  phone: '+919999999999',
   email: 'hello@suranango.org',
 };
 

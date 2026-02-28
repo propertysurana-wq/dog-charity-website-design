@@ -502,7 +502,7 @@
 // //                     </div>
 // //                     <div>
 // //                       <p className="font-semibold text-gray-900">Schedule a Visit</p>
-// //                       <p className="text-gray-600">Call: +91 98765 43210</p>
+// //                       <p className="text-gray-600">Call: +919999999999</p>
 // //                       <p className="text-gray-600">Email: shelter@suranaNGO.org</p>
 // //                     </div>
 // //                   </div>
@@ -573,7 +573,7 @@
 // //               className="inline-flex items-center justify-center gap-2 bg-gray-900 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-800 transition-colors"
 // //             >
 // //               <Phone className="w-6 h-6" />
-// //               Call: +91 98765 43210
+// //               Call: +919999999999
 // //             </a>
 // //             <a
 // //               href="/emergency-contact"
@@ -1928,7 +1928,7 @@
 //                   {[
 //                     { label: 'Main Shelter', info: '123 Dog Welfare Street, Surana Nagar, Rajasthan - 302001', img: 'https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=80&h=80&fit=crop' },
 //                     { label: 'Visiting Hours', info: 'Monday - Saturday: 10 AM - 4 PM\nSunday: By appointment only', img: 'https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=80&h=80&fit=crop' },
-//                     { label: 'Schedule a Visit', info: 'Call: +91 98765 43210\nEmail: shelter@suranaNGO.org', img: 'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=80&h=80&fit=crop' },
+//                     { label: 'Schedule a Visit', info: 'Call: +919999999999\nEmail: shelter@suranaNGO.org', img: 'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=80&h=80&fit=crop' },
 //                   ].map((row, i) => (
 //                     <div key={i} className="sc-visit-row">
 //                       <img src={row.img} alt={row.label} />
@@ -1975,7 +1975,7 @@
 //             <h2>Report a Dog in Need</h2>
 //             <p>If you see an injured, sick, or distressed dog, please contact us immediately. Your call could save a life.</p>
 //             <div className="sc-cta-btns">
-//               <a href="tel:+919876543210" className="sc-cta-btn-dark">📞 Call: +91 98765 43210</a>
+//               <a href="tel:+919876543210" className="sc-cta-btn-dark">📞 Call: +919999999999</a>
 //               <a href="/emergency-contact" className="sc-cta-btn-white">⭐ Report Online</a>
 //             </div>
 //           </div>

@@ -379,7 +379,7 @@
 //                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-yellow-400 text-navy-900 font-bold rounded-lg hover:bg-yellow-300 transition-colors"
 //               >
 //                 <Phone className="w-5 h-5" />
-//                 +91 98765 43210
+//                 +919999999999
 //               </a>
 //               <Link 
 //                 to="/contact"
@@ -949,7 +949,7 @@ const DogProblemResolutionPage = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="tel:+919876543210" className="inline-flex items-center justify-center gap-2 bg-[#002b5c] text-white px-7 py-4 rounded-2xl font-bold shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
-                  <Phone size={17} className="text-[#ffd100]" /> +91 98765 43210
+                  <Phone size={17} className="text-[#ffd100]" /> +919999999999
                 </a>
                 <Link to="/contact" className="inline-flex items-center justify-center gap-2 bg-white/50 border-2 border-[#002b5c] text-[#002b5c] px-7 py-4 rounded-2xl font-bold hover:bg-[#002b5c] hover:text-white transition-all duration-300">
                   <FileText size={17} /> Submit Complaint

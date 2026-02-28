@@ -211,7 +211,7 @@ const ContactUsPage: React.FC = () => {
                 <ol className="space-y-3 text-gray-700">
                   <li className="flex items-start gap-2">
                     <span className="w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">1</span>
-                    <span><strong>Call immediately:</strong> +91 98765 43210</span>
+                    <span><strong>Call immediately:</strong> +919999999999</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">2</span>
@@ -579,7 +579,7 @@ const ContactUsPage: React.FC = () => {
                     <div>
                       <h4 className="font-semibold text-lg">Contact</h4>
                       <p className="text-gray-300">
-                        Phone: +91 98765 43210<br />
+                        Phone: +919999999999<br />
                         Email: info@suranaNGO.org
                       </p>
                     </div>

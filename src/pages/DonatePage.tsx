@@ -559,7 +559,7 @@ document.head.appendChild(fontLink);
 const orgInfo = {
   name: 'Surana Dog Welfare Foundation',
   email: 'donate@suranadogngo.org',
-  phone: '+91 98765 43210',
+  phone: '+919999999999',
 };
 
 const bankDetails = {

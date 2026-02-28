@@ -117,7 +117,7 @@ class ErrorBoundary extends Component<Props, State> {
                 href="tel:+919876543210"
                 className="text-blue-600 hover:underline"
               >
-                Call us at +91 98765 43210
+                Call us at +91 99999999999
               </a>
             </p>
           </div>

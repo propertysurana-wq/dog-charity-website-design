@@ -510,7 +510,7 @@ const VaccinationDiseasePage: React.FC = () => {
               className="inline-flex items-center gap-2 bg-yellow-400 text-gray-900 px-6 py-3 rounded-full font-bold hover:bg-yellow-500 transition-colors"
             >
               <Phone className="w-5 h-5" />
-              Call to Request: +91 98765 43210
+              Call to Request: +919999999999
             </a>
           </div>
         </div>

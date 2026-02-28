@@ -291,7 +291,7 @@
 //                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-red-600 font-bold rounded-lg hover:bg-gray-100 transition-colors text-xl"
 //               >
 //                 <Phone className="w-6 h-6" />
-//                 +91 98765 43210
+//                 +919999999999
 //               </a>
 //               <a 
 //                 href="https://wa.me/919876543210"
@@ -755,7 +755,7 @@ const workAreas = [
                 href="tel:+919876543210"
                 className="emergency-btn inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-red-600 font-black rounded-xl text-xl"
               >
-                📞 +91 98765 43210
+                📞 +919999999999
               </a>
               <a
                 href="https://wa.me/919876543210"

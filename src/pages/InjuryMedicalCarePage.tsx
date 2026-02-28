@@ -182,7 +182,7 @@
 //               href="tel:+919876543210"
 //               className="text-2xl md:text-3xl font-bold text-navy-900 hover:text-navy-700"
 //             >
-//               +91 98765 43210
+//               +919999999999
 //             </a>
 //             <span className="flex items-center gap-2 text-navy-800">
 //               <Clock className="w-5 h-5" />
@@ -392,7 +392,7 @@
 //                 className="inline-flex items-center justify-center gap-2 px-10 py-5 bg-white text-red-600 font-bold rounded-lg hover:bg-gray-100 transition-colors text-xl"
 //               >
 //                 <Phone className="w-6 h-6" />
-//                 +91 98765 43210
+//                 +919999999999
 //               </a>
 //               <a 
 //                 href="https://wa.me/919876543210"
@@ -1210,7 +1210,7 @@
 //             <div className="content">
 //               <img src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=80&h=80&fit=crop" alt="Phone" />
 //               <span className="label">Emergency Rescue Helpline:</span>
-//               <a href="tel:+919876543210">+91 98765 43210</a>
+//               <a href="tel:+919876543210">+919999999999</a>
 //               <span className="timing">⏰ Available 24/7</span>
 //             </div>
 //           </div>
@@ -1377,7 +1377,7 @@
 //             </p>
 //             <div className="cta-btns">
 //               <a href="tel:+919876543210" className="btn-call">
-//                 📞 +91 98765 43210
+//                 📞 +919999999999
 //               </a>
 //               <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="btn-wa">
 //                 💬 WhatsApp

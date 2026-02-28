@@ -8,8 +8,8 @@ import { Phone, MessageCircle, Clock, MapPin, AlertTriangle, CheckCircle, Send, 
 
 // Emergency contact information
 const emergencyContacts = {
-  mainHelpline: '+91 98765 43210',
-  whatsapp: '+91 98765 43210',
+  mainHelpline: '+919999999999',
+  whatsapp: '+919999999999',
   emergencyHotline: '+91 98765 43211',
   email: 'emergency@suranaNGO.org',
 };

@@ -352,7 +352,7 @@
 //                   </div>
 //                   <div>
 //                     <p className="font-semibold text-navy-900">Contact</p>
-//                     <p className="text-gray-600">Phone: +91 98765 43210</p>
+//                     <p className="text-gray-600">Phone: +919999999999</p>
 //                     <p className="text-gray-600">Email: shelter@suranaNGO.org</p>
 //                   </div>
 //                 </div>
@@ -416,7 +416,7 @@
 //                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-yellow-400 text-navy-900 font-bold rounded-lg hover:bg-yellow-300 transition-colors"
 //               >
 //                 <Phone className="w-5 h-5" />
-//                 +91 98765 43210
+//                 +919999999999
 //               </a>
 //               <Link 
 //                 to="/contact"
