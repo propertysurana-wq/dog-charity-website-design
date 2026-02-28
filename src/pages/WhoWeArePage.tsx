@@ -645,16 +645,63 @@ const WhoWeArePage = () => {
     { name: 'Kota Rescue Centre', location: 'Talwandi, Kota', dogs: 22, established: 2021 },
   ];
 
+  // const timelineData = [
+  //   { year: '2010', title: 'Foundation', description: 'Suranango for Dogs founded in Jaipur by Dr. Meera Sharma with 20 dogs in a backyard.' },
+  //   { year: '2012', title: 'First 500 Rescues', description: 'Reached the milestone of 500 dogs rescued and successfully rehomed.' },
+  //   { year: '2013', title: 'Jodhpur Expansion', description: 'Opened our second shelter in Jodhpur, doubling capacity.' },
+  //   { year: '2015', title: 'Sterilization Program', description: 'Launched large-scale ABC sterilization program across Rajasthan.' },
+  //   { year: '2017', title: '5 Centres', description: 'Expanded to 5 rescue centres — serving all major Rajasthan cities.' },
+  //   { year: '2020', title: '10 Year Anniversary', description: 'Celebrated 10 years with 15,000+ dogs helped across the state.' },
+  //   { year: '2023', title: '6th Centre', description: 'Opened Kota Rescue Centre, our newest and most modern facility.' },
+  //   { year: '2024', title: 'Today', description: 'Continuing our mission with 200+ dogs in care daily.' },
+  // ];
+
+
+
   const timelineData = [
-    { year: '2010', title: 'Foundation', description: 'Suranango for Dogs founded in Jaipur by Dr. Meera Sharma with 20 dogs in a backyard.' },
-    { year: '2012', title: 'First 500 Rescues', description: 'Reached the milestone of 500 dogs rescued and successfully rehomed.' },
-    { year: '2013', title: 'Jodhpur Expansion', description: 'Opened our second shelter in Jodhpur, doubling capacity.' },
-    { year: '2015', title: 'Sterilization Program', description: 'Launched large-scale ABC sterilization program across Rajasthan.' },
-    { year: '2017', title: '5 Centres', description: 'Expanded to 5 rescue centres — serving all major Rajasthan cities.' },
-    { year: '2020', title: '10 Year Anniversary', description: 'Celebrated 10 years with 15,000+ dogs helped across the state.' },
-    { year: '2023', title: '6th Centre', description: 'Opened Kota Rescue Centre, our newest and most modern facility.' },
-    { year: '2024', title: 'Today', description: 'Continuing our mission with 200+ dogs in care daily.' },
-  ];
+  {
+    year: '2010',
+    title: 'Our Beginning',
+    description:
+      'Surana Dog NGO began its journey in Bhilwara with a small group of volunteers committed to helping injured and vulnerable community dogs.'
+  },
+  {
+    year: '2012',
+    title: 'Early Rescue & Care',
+    description:
+      'Started providing basic medical aid, injury treatment, and on-ground support for street dogs in nearby localities.'
+  },
+  {
+    year: '2015',
+    title: 'Vaccination Support',
+    description:
+      'Actively assisted in anti-rabies vaccination efforts and promoted awareness about dog safety and public health.'
+  },
+  {
+    year: '2018',
+    title: 'Society Problem Resolution',
+    description:
+      'Began working closely with housing societies to resolve dog-related issues humanely without relocation or harm.'
+  },
+  {
+    year: '2020',
+    title: 'Community Trust Built',
+    description:
+      'Gained trust of local residents, RWAs, and animal lovers through responsible, lawful, and compassionate action.'
+  },
+  {
+    year: '2023',
+    title: 'Strengthening Ground Work',
+    description:
+      'Expanded emergency response for injured dogs and improved coordination with local veterinarians.'
+  },
+  {
+    year: '2026',
+    title: 'Today',
+    description:
+      'Continuing our dedicated work in Bhilwara, focusing exclusively on community dogs through care, vaccination support, and humane conflict resolution.'
+  }
+];
 
   const statsData = [
     { num: 25000, suffix: '+', label: 'Dogs Rescued' },
@@ -753,64 +800,87 @@ const WhoWeArePage = () => {
       `}</style>
 
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      <section
-        ref={hero.ref}
-        className="relative overflow-hidden"
-        style={{ background: 'linear-gradient(140deg, #001628 0%, #002b5c 60%, #003875 100%)', minHeight: '580px' }}
+     <section
+  ref={hero.ref}
+  className="relative overflow-hidden"
+  style={{ background: 'linear-gradient(140deg, #001628 0%, #002b5c 60%, #003875 100%)', minHeight: '380px' }}
+>
+  {/* Orbs */}
+  <div className="pointer-events-none absolute inset-0">
+    <div className="absolute top-0 right-0 w-64 h-64 sm:w-[600px] sm:h-[600px] rounded-full opacity-15"
+      style={{ background: 'radial-gradient(circle, #ffd100, transparent)', filter: 'blur(90px)' }} />
+    <div className="absolute bottom-0 left-0 w-56 h-56 sm:w-80 sm:h-80 rounded-full opacity-10"
+      style={{ background: 'radial-gradient(circle, #3b82f6, transparent)', filter: 'blur(60px)' }} />
+    {/* grid lines */}
+    <div className="absolute inset-0 opacity-[0.025]"
+      style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,1) 1px,transparent 1px)', backgroundSize: '55px 55px' }} />
+    {/* floating paws */}
+    {['10%','70%','45%','85%','25%','60%'].map((left, i) => (
+      <div key={i} className="paw-float absolute text-white/[0.04] select-none text-4xl"
+        style={{ top: `${8 + i * 14}%`, left, animationDelay: `${i * 0.8}s` }}>🐾</div>
+    ))}
+  </div>
+
+  {/* bg image */}
+  <div className="absolute inset-0 z-0">
+    <img
+      src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1920&h=800&fit=crop"
+      alt=""
+      className="w-full h-full object-cover opacity-10"
+    />
+  </div>
+
+  {/* Content */}
+  <div
+    className={`relative z-10 max-w-7xl mx-auto px-5 sm:px-8 md:px-12 py-10 sm:py-14 md:py-20 flex flex-col justify-center rev ${hero.visible ? 'in' : ''}`}
+    style={{ minHeight: '380px' }}
+  >
+    <div className="max-w-2xl mx-auto md:mx-0 text-center md:text-left">
+
+      {/* Badge */}
+      <span className="inline-flex items-center gap-2 text-[#ffd100] font-black text-xs uppercase tracking-widest mb-4 px-4 py-1.5 rounded-full border border-[#ffd100]/25 bg-[#ffd100]/10">
+        <Users size={12} /> About Us
+      </span>
+
+      {/* Heading */}
+      <h1
+        className="font-black text-white leading-tight mb-4"
+        style={{ fontFamily: "'Playfair Display',serif", fontSize: 'clamp(2rem, 5vw, 4rem)', lineHeight: 1.08 }}
       >
-        {/* Orbs */}
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-15" style={{ background: 'radial-gradient(circle, #ffd100, transparent)', filter: 'blur(100px)' }} />
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full opacity-10" style={{ background: 'radial-gradient(circle, #3b82f6, transparent)', filter: 'blur(70px)' }} />
-          {/* grid lines */}
-          <div className="absolute inset-0 opacity-[0.025]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,1) 1px,transparent 1px)', backgroundSize: '55px 55px' }} />
-          {/* floating paws */}
-          {['10%','70%','45%','85%','25%','60%'].map((left, i) => (
-            <div key={i} className="paw-float absolute text-white/[0.04] select-none text-5xl" style={{ top: `${8 + i * 14}%`, left, animationDelay: `${i * 0.8}s` }}>🐾</div>
-          ))}
-        </div>
+        Who We <span style={{ color: '#ffd100', fontStyle: 'italic' }}>Are</span>
+      </h1>
 
-        {/* bg image */}
-        <div className="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1920&h=800&fit=crop" alt="" className="w-full h-full object-cover opacity-10" />
-        </div>
+      {/* Subtext */}
+      <p className="text-blue-200 text-sm sm:text-base leading-relaxed font-light mb-7 max-w-xl mx-auto md:mx-0">
+        Surana Dog NGO is a community-focused organization dedicated exclusively to the welfare
+        and protection of community dogs. We work on the ground to address real dog-related issues
+        through medical care, vaccination support, injury treatment, temporary shelter, and humane
+        conflict resolution within societies.
+      </p>
 
-        <div className={`relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-28 flex flex-col justify-center rev ${hero.visible ? 'in' : ''}`} style={{ minHeight: '580px' }}>
-          <div className="max-w-2xl">
-            <span className="inline-flex items-center gap-2 text-[#ffd100] font-black text-xs uppercase tracking-widest mb-6 px-4 py-2 rounded-full border border-[#ffd100]/25 bg-[#ffd100]/10">
-              <Users size={12} /> About Us
-            </span>
-            <h1 className="font-black text-white leading-tight mb-6" style={{ fontFamily: "'Playfair Display',serif", fontSize: 'clamp(2.6rem,5vw,4.2rem)', lineHeight: 1.05 }}>
-              Who We <span style={{ color: '#ffd100', fontStyle: 'italic' }}>Are</span>
-            </h1>
-            <p className="text-blue-200 text-lg leading-relaxed font-light mb-10 max-w-xl">
-              {orgInfo.name} is Rajasthan's leading dog rescue organization. Since {orgInfo.foundedYear}, we've been dedicated to rescuing street dogs, providing medical care, and finding them loving forever homes.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <a href="/what-we-do" className="btn-navy inline-flex items-center gap-2 px-8 py-4 rounded-2xl font-bold shadow-xl">
-                See What We Do <ArrowRight size={16} className="text-[#ffd100]" />
-              </a>
-              <a href="/get-involved" className="btn-outline inline-flex items-center gap-2 px-8 py-4 rounded-2xl font-bold border-2 border-white/40 text-white">
-                Join Our Team <Heart size={16} />
-              </a>
-            </div>
-          </div>
+      {/* Buttons */}
+      <div className="flex flex-row gap-3 flex-wrap justify-center md:justify-start">
+        <a href="/what-we-do"
+          className="btn-navy inline-flex items-center gap-2 px-5 sm:px-7 py-3 rounded-2xl font-bold shadow-xl text-sm sm:text-base whitespace-nowrap">
+          See What We Do <ArrowRight size={15} className="text-[#ffd100]" />
+        </a>
+        <a href="/get-involved"
+          className="btn-outline inline-flex items-center gap-2 px-5 sm:px-7 py-3 rounded-2xl font-bold border-2 border-white/40 text-white text-sm sm:text-base whitespace-nowrap">
+          Join Our Team <Heart size={15} />
+        </a>
+      </div>
 
-          {/* Stats strip */}
-          <div className={`mt-16 inline-flex flex-wrap gap-0 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl px-2 py-4 rev ${hero.visible ? 'in' : ''}`} style={{ transitionDelay: '300ms' }}>
-            {statsData.map((s, i) => (
-              <StatBadge key={i} {...s} started={hero.visible} />
-            ))}
-          </div>
-        </div>
+    </div>
+  </div>
 
-        {/* Wave bottom */}
-        <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style={{ display: 'block', width: '100%', height: '60px' }}>
-            <path d="M0,35 C480,70 960,0 1440,35 L1440,70 L0,70 Z" fill="#ffffff" />
-          </svg>
-        </div>
-      </section>
+  {/* Wave bottom */}
+  <div className="absolute bottom-0 left-0 right-0">
+    <svg viewBox="0 0 1440 55" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+      style={{ display: 'block', width: '100%', height: '45px' }}>
+      <path d="M0,28 C480,55 960,0 1440,28 L1440,55 L0,55 Z" fill="#ffffff" />
+    </svg>
+  </div>
+</section>
 
       {/* ── MISSION & VISION ─────────────────────────────────────────────── */}
       <section className="py-24 bg-white relative" ref={missionVision.ref}>
@@ -830,7 +900,7 @@ const WhoWeArePage = () => {
               </div>
               <h2 className="font-black text-[#002b5c] mb-5" style={{ fontFamily: "'Playfair Display',serif", fontSize: '1.9rem' }}>Our Mission</h2>
               <p className="text-[#002b5c]/75 text-lg leading-relaxed font-light">
-                To rescue, rehabilitate, and rehome abandoned and injured street dogs while promoting responsible pet ownership and compassionate coexistence throughout Rajasthan.
+               To protect and care for community dogs through responsible medical support, vaccination assistance, injury treatment, temporary shelter, and humane problem resolution—without relocation or harm.
               </p>
             </div>
             {/* Vision */}
@@ -841,7 +911,7 @@ const WhoWeArePage = () => {
               </div>
               <h2 className="font-black text-white mb-5" style={{ fontFamily: "'Playfair Display',serif", fontSize: '1.9rem' }}>Our Vision</h2>
               <p className="text-blue-200 text-lg leading-relaxed font-light">
-                A world where every dog is valued, protected, and loved — where no dog suffers on the streets, and every community embraces compassion towards all animals.
+              A safe and respectful environment where community dogs are protected, understood, and cared for, and where societies coexist peacefully with dogs through lawful and compassionate solutions.
               </p>
             </div>
           </div>
@@ -871,9 +941,9 @@ const WhoWeArePage = () => {
                 <span style={{ fontStyle: 'italic', color: '#f97316' }}>to Big Impact</span>
               </h2>
               <div className="space-y-5 text-gray-500 font-light leading-relaxed">
-                <p>{orgInfo.name} was born from a simple act of compassion. In 2010, Dr. Meera Sharma, a young veterinarian in Jaipur, began rescuing injured street dogs from her neighborhood. What started as caring for a few dogs in her backyard soon grew into something much bigger.</p>
-                <p>Moved by the suffering she witnessed daily and inspired by the resilience of these animals, Dr. Meera established {orgInfo.name} with a small team of volunteers and a rented space that could house just 20 dogs.</p>
-                <p>Today, we operate 6 rescue centres across Rajasthan, employ a team of dedicated professionals and veterinarians, and have helped over 25,000 dogs find safety, healing, and love.</p>
+                <p>{orgInfo.name} began with a simple purpose—to respond responsibly to the growing challenges faced by community dogs. Starting at the local level, our focus remains on real on-ground action rather than promises.</p>
+                <p>As we move forward, we aim to strengthen our rescue response, expand medical and vaccination support, and work closely with societies to resolve dog-related concerns humanely. Every step we take is guided by compassion, responsibility, and respect for life</p>
+                {/* <p>Today, we operate 6 rescue centres across Rajasthan, employ a team of dedicated professionals and veterinarians, and have helped over 25,000 dogs find safety, healing, and love.</p> */}
               </div>
               <a href="/get-involved" className="btn-navy mt-8 inline-flex items-center gap-2 px-7 py-4 rounded-2xl font-bold shadow-xl">
                 Be Part of Our Story <ArrowRight size={16} className="text-[#ffd100]" />
@@ -907,7 +977,7 @@ const WhoWeArePage = () => {
       </section>
 
       {/* ── CORE VALUES ───────────────────────────────────────────────────── */}
-      <section className="py-24 relative overflow-hidden" ref={valuesRef.ref} style={{ background: 'linear-gradient(140deg, #001628 0%, #002b5c 100%)' }}>
+      {/* <section className="py-24 relative overflow-hidden" ref={valuesRef.ref} style={{ background: 'linear-gradient(140deg, #001628 0%, #002b5c 100%)' }}>
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full opacity-10" style={{ background: 'radial-gradient(circle, #ffd100, transparent)', filter: 'blur(100px)' }} />
           <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full opacity-10" style={{ background: 'radial-gradient(circle, #3b82f6, transparent)', filter: 'blur(80px)' }} />
@@ -924,10 +994,10 @@ const WhoWeArePage = () => {
             {values.map((v, i) => <ValueCard key={i} index={i} {...v} />)}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── STATS ─────────────────────────────────────────────────────────── */}
-      <section className="py-24 bg-white relative dot-bg" ref={statsRef.ref}>
+      {/* <section className="py-24 bg-white relative dot-bg" ref={statsRef.ref}>
         <div className="max-w-6xl mx-auto px-6 text-center">
           <div className={`mb-14 rev ${statsRef.visible ? 'in' : ''}`}>
             <span className="inline-block text-[#f97316] font-black text-xs uppercase tracking-widest mb-3 px-3 py-1 bg-orange-50 rounded-full border border-orange-100">Our Impact</span>
@@ -947,7 +1017,7 @@ const WhoWeArePage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── LEADERSHIP TEAM ───────────────────────────────────────────────── */}
       <section className="py-24 bg-white relative" ref={teamRef.ref} id="team">
@@ -966,7 +1036,7 @@ const WhoWeArePage = () => {
       </section>
 
       {/* ── RESCUE CENTRES ────────────────────────────────────────────────── */}
-      <section className="py-24 dot-bg bg-slate-50 relative" ref={centresRef.ref} id="centres">
+      {/* <section className="py-24 dot-bg bg-slate-50 relative" ref={centresRef.ref} id="centres">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className={`text-center mb-16 rev ${centresRef.visible ? 'in' : ''}`}>
             <span className="inline-block text-[#f97316] font-black text-xs uppercase tracking-widest mb-3 px-3 py-1 bg-orange-50 rounded-full border border-orange-100">Our Locations</span>
@@ -983,7 +1053,7 @@ const WhoWeArePage = () => {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── CONTACT STRIP ─────────────────────────────────────────────────── */}
       <section ref={contactRef.ref} className="py-20 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #ffd100 0%, #ffec6e 50%, #ffd100 100%)' }}>

@@ -456,69 +456,72 @@ const styles = `
 
 const OurWorkPage: React.FC = () => {
 
-  const workAreas = [
-    {
-      id: 'dog-problem-resolution',
-      img: 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&h=300&fit=crop',
-      title: 'Dog Problem Resolution',
-      description: 'We handle complaints related to community dogs including fear, aggression, barking, and puppies in danger. Our team provides humane, on-site assessment and peaceful solutions without forced relocation.',
-      features: [
-        'On-site assessment by trained professionals',
-        'Peaceful conflict resolution',
-        'Behavior management guidance',
-        'No forced relocation of dogs',
-      ],
-      link: '/our-work/dog-problem-resolution',
-      accent: '#F58220',
-      lightBg: '#fff7f0',
-    },
-    {
-      id: 'injury-medical-care',
-      img: 'https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?w=400&h=300&fit=crop',
-      title: 'Injury & Medical Care',
-      description: 'Emergency rescue and medical treatment for injured or sick community dogs. We respond to road accidents, provide medical evaluation, treatment, and temporary shelter during recovery.',
-      features: [
-        '24/7 emergency rescue response',
-        'Professional veterinary care',
-        'Road accident case handling',
-        'Recovery shelter support',
-      ],
-      link: '/our-work/injury-medical-care',
-      accent: '#e53e3e',
-      lightBg: '#fff5f5',
-    },
-    {
-      id: 'vaccination-programs',
-      img: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=300&fit=crop',
-      title: 'Vaccination Programs',
-      description: 'Regular anti-rabies vaccination drives and disease prevention programs for community dogs. We protect both dogs and humans through comprehensive vaccination coverage.',
-      features: [
-        'Anti-rabies vaccination',
-        'Disease prevention programs',
-        'Community vaccination drives',
-        'Public safety education',
-      ],
-      link: '/our-work/vaccination-programs',
-      accent: '#00A19A',
-      lightBg: '#f0fffe',
-    },
-    {
-      id: 'shelter-support',
-      img: 'https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=400&h=300&fit=crop',
-      title: 'Shelter Support',
-      description: 'Temporary shelter for injured, sick, or recovering dogs. We provide a safe environment with food, rest, medical monitoring, and care until dogs are ready to return to their community.',
-      features: [
-        'Safe recovery environment',
-        'Proper nutrition & hydration',
-        'Medical monitoring',
-        'Care until full recovery',
-      ],
-      link: '/our-work/shelter-support',
-      accent: '#002B5C',
-      lightBg: '#f0f4ff',
-    },
-  ];
-
+const workAreas = [
+  {
+    id: 'dog-problem-resolution',
+    img: 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&h=300&fit=crop',
+    title: 'Dog Issue Resolution',
+    description:
+      'Humane and lawful resolution of dog-related complaints while ensuring safety for both residents and community dogs.',
+    features: [
+      'On-site complaint assessment',
+      'Behavioral observation & guidance',
+      'Peaceful conflict resolution',
+      'Community awareness support',
+    ],
+    link: '/our-work/dog-problem-resolution',
+    accent: '#F58220',
+    lightBg: '#fff7f0',
+  },
+  {
+    id: 'injury-medical-care',
+    img: 'https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?w=400&h=300&fit=crop',
+    title: 'Injury & Emergency Care',
+    description:
+      'Immediate rescue and medical treatment for injured or sick community dogs including road accident cases.',
+    features: [
+      'Emergency rescue response',
+      'Veterinary treatment support',
+      'Accident case handling',
+      'Temporary recovery shelter',
+    ],
+    link: '/our-work/injury-medical-care',
+    accent: '#e53e3e',
+    lightBg: '#fff5f5',
+  },
+  {
+    id: 'vaccination-programs',
+    img: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=300&fit=crop',
+    title: 'Vaccination Programs',
+    description:
+      'Regular anti-rabies and preventive vaccination drives to protect community dogs and ensure public safety.',
+    features: [
+      'Anti-rabies vaccination',
+      'Preventive health programs',
+      'Community vaccination drives',
+      'Public safety awareness',
+    ],
+    link: '/our-work/vaccination-programs',
+    accent: '#00A19A',
+    lightBg: '#f0fffe',
+  },
+  {
+    id: 'shelter-support',
+    img: 'https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=400&h=300&fit=crop',
+    title: 'Shelter & Recovery Support',
+    description:
+      'Safe temporary shelter for injured, sick, or recovering dogs with proper care and monitoring.',
+    features: [
+      'Safe recovery environment',
+      'Nutrition & hydration support',
+      'Medical monitoring',
+      'Care until full recovery',
+    ],
+    link: '/our-work/shelter-support',
+    accent: '#002B5C',
+    lightBg: '#f0f4ff',
+  },
+];
   const stats = [
     {
       number: '3,500+',
@@ -572,7 +575,7 @@ const OurWorkPage: React.FC = () => {
       </section>
 
       {/* ── Stats ── */}
-      <section className="py-12 bg-[#FFD100]">
+      {/* <section className="py-12 bg-[#FFD100]">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, i) => (
@@ -586,7 +589,7 @@ const OurWorkPage: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── Work Areas ── */}
       <section className="py-16 lg:py-24 bg-white">
@@ -640,7 +643,7 @@ const OurWorkPage: React.FC = () => {
                           ))}
                         </div>
                       </div>
-                      <div className="flex-shrink-0">
+                      {/* <div className="flex-shrink-0">
                         <Link
                           to={area.link}
                           className="learn-btn inline-flex items-center gap-2 px-6 py-3 bg-[#002B5C] text-white font-bold rounded-xl"
@@ -648,7 +651,7 @@ const OurWorkPage: React.FC = () => {
                           Learn More
                           <ArrowRight className="w-5 h-5" />
                         </Link>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
@@ -659,68 +662,76 @@ const OurWorkPage: React.FC = () => {
       </section>
 
       {/* ── Our Approach ── */}
-      <section className="py-16 lg:py-24 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <span className="text-[#F58220] font-bold text-sm uppercase tracking-widest">Our Approach</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#002B5C] mt-2 mb-4">
-                Humane & Compassionate Solutions
-              </h2>
-            </div>
+     <section className="py-16 lg:py-24 bg-gray-50">
+  <div className="container mx-auto px-4">
+    <div className="max-w-4xl mx-auto">
+      <div className="text-center mb-12">
+        <span className="text-[#F58220] font-bold text-sm uppercase tracking-widest">
+          Our Commitment
+        </span>
+        <h2 className="text-3xl md:text-4xl font-bold text-[#002B5C] mt-2 mb-4">
+          Humane & Responsible Dog Care
+        </h2>
+        <p className="text-gray-600 max-w-2xl mx-auto">
+          We are dedicated exclusively to the welfare of community dogs, 
+          ensuring safety, medical care, and peaceful coexistence in society.
+        </p>
+      </div>
 
-            <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
-              <div className="grid md:grid-cols-2 gap-10">
-                {/* What we do */}
-                <div>
-                  <h3 className="text-xl font-bold text-[#002B5C] mb-5 flex items-center gap-2">
-                    <CheckCircle className="w-6 h-6 text-green-600" />
-                    What We Do
-                  </h3>
-                  <ul className="space-y-2 text-gray-700">
-                    {[
-                      'Respond to emergency calls for injured dogs',
-                      'Provide on-site assessment for dog-related complaints',
-                      'Conduct vaccination and sterilization programs',
-                      'Offer temporary shelter for recovering dogs',
-                      'Educate communities about dog behavior',
-                      'Resolve conflicts through peaceful dialogue',
-                    ].map((item, i) => (
-                      <li key={i} className="approach-item flex items-start gap-2 cursor-default">
-                        <span className="text-green-600 font-bold mt-0.5">✓</span>
-                        <span className="font-medium">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+      <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+        <div className="grid md:grid-cols-2 gap-10">
 
-                {/* What we never do */}
-                <div>
-                  <h3 className="text-xl font-bold text-[#002B5C] mb-5 flex items-center gap-2">
-                    <AlertTriangle className="w-6 h-6 text-red-600" />
-                    What We Never Do
-                  </h3>
-                  <ul className="space-y-2 text-gray-700">
-                    {[
-                      'Forcibly relocate or remove dogs',
-                      'Use cruel or inhumane methods',
-                      'Ignore legal guidelines and animal welfare laws',
-                      'Sell or trade animals',
-                      'Discriminate based on dog breed or appearance',
-                      'Abandon dogs after treatment',
-                    ].map((item, i) => (
-                      <li key={i} className="approach-item approach-item-red flex items-start gap-2 cursor-default">
-                        <span className="text-red-600 font-bold mt-0.5">✗</span>
-                        <span className="font-medium">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
+          {/* What we do */}
+          <div>
+            <h3 className="text-xl font-bold text-[#002B5C] mb-5 flex items-center gap-2">
+              <CheckCircle className="w-6 h-6 text-green-600" />
+              What We Do
+            </h3>
+            <ul className="space-y-3 text-gray-700">
+              {[
+                'Rescue and treat injured or sick community dogs',
+                'Respond to dog-related complaints with on-site assessment',
+                'Conduct anti-rabies vaccination programs',
+                'Provide temporary shelter during recovery',
+                'Promote awareness about safe dog-human coexistence',
+                'Ensure humane and lawful resolution of conflicts',
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-2">
+                  <span className="text-green-600 font-bold mt-0.5">✓</span>
+                  <span className="font-medium">{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
+
+          {/* What we never do */}
+          <div>
+            <h3 className="text-xl font-bold text-[#002B5C] mb-5 flex items-center gap-2">
+              <AlertTriangle className="w-6 h-6 text-red-600" />
+              What We Never Do
+            </h3>
+            <ul className="space-y-3 text-gray-700">
+              {[
+                'Forcibly remove or illegally relocate dogs',
+                'Use poison, violence, or cruel methods',
+                'Encourage harm against community dogs',
+                'Sell, trade, or exploit animals',
+                'Ignore society concerns or legal guidelines',
+                'Abandon dogs after treatment or rescue',
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-2">
+                  <span className="text-red-600 font-bold mt-0.5">✗</span>
+                  <span className="font-medium">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* ── Emergency Contact ── */}
       <section className="py-16 lg:py-20 bg-red-600 text-white">

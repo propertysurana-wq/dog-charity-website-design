@@ -529,23 +529,23 @@ const principles = [
 ];
 
 const strategicGoals = [
-  { year: '2024', color: '#ffd100', textColor: '#002b5c', goals: ['Vaccinate 60,000 dogs across Rajasthan', 'Establish 2 new rescue response units', 'Train 100 community volunteers', 'Launch school awareness program in 50 schools'] },
-  { year: '2025', color: '#002b5c', textColor: '#ffd100', goals: ['Achieve 80% vaccination coverage in service areas', 'Expand operations to 3 new districts', 'Build dedicated veterinary hospital', 'Create mobile sterilization clinic'] },
-  { year: '2030', color: '#f97316', textColor: '#ffffff', goals: ['Eliminate rabies deaths in our service areas', 'Establish model animal welfare district', 'Train 1000+ community caregivers', 'Become state-level resource organization'] },
+  { year: '2026', color: '#ffd100', textColor: '#002b5c', goals: ['Establish a reliable on-ground response system for injured and distressed community dogs', 'Support anti-rabies vaccination and basic medical care in selected local areas', 'Build a trained volunteer and rescue network', 'Create awareness in societies about humane dog–human coexistence'] },
+  { year: '2027 ', color: '#002b5c', textColor: '#ffd100', goals: ['Expand vaccination and sterilization support in more neighborhoods', 'Improve emergency response time for injured dogs', 'Partner with local veterinarians and authorities', 'Develop temporary shelter support for critical cases'] },
+  { year: 'Long-Term Vision', color: '#f97316', textColor: '#ffffff', goals: ['Reduce dog-related conflicts through humane, lawful solutions', 'Promote responsible community care for dogs', 'Create safer environments for both dogs and societies', 'Build a sustainable, transparent dog welfare organization'] },
 ];
 
 const missionPoints = [
-  { title: 'Compassionate Care', desc: 'Every dog we encounter receives kind, professional care based on their individual needs' },
-  { title: 'Medical Treatment',  desc: 'We provide emergency rescue, veterinary care, vaccination, and rehabilitation' },
-  { title: 'Protection',         desc: 'We advocate for dogs\' legal rights and protect them from cruelty and harm' },
-  { title: 'Community Engagement', desc: 'We work with people to resolve conflicts and build mutual understanding' },
+  { title: 'Compassionate Care', desc: 'Every dog we assist is treated with care, patience, and respect, regardless of age, condition, or location.' },
+  { title: 'Medical & Veterinary Support',  desc: 'We provide emergency aid, surgery assistance, vaccination, and recovery care through qualified veterinary support' },
+  { title: 'Protection from Harm',         desc: 'We actively intervene in cases of cruelty, injury, abandonment, or illegal relocation to protect dogs from harm.' },
+  { title: 'On-Ground Action', desc: 'Our team responds directly to reported cases, conducts vaccination drives, and monitors dogs during recovery.' },
 ];
 
 const visionPoints = [
-  { title: 'Rabies-Free Communities', desc: 'Zero rabies deaths in our service areas through comprehensive vaccination' },
-  { title: 'Compassionate Society',  desc: 'A society where animals are treated with respect and kindness by all' },
-  { title: 'Zero Cruelty',           desc: 'End to animal abuse through education, awareness, and enforcement' },
-  { title: 'Peaceful Coexistence',   desc: 'Harmonious living between humans and community dogs' },
+  { title: 'Action-Focused', desc: 'It clearly explains how we work, including humane solutions, no forced relocation, and strict legal compliance.' },
+  { title: 'More Relevant for Dog-Problem Resolution NGOs',  desc: 'Societies, RWAs, and authorities can clearly understand our rules, process, and working method' },
+  { title: 'Provides Legal & Safety Clarity',           desc: 'Principles such as “No Forced Relocation” and “Legal Compliance” help build trust and transparency.' },
+  { title: 'Reduces Misunderstanding',   desc: 'It clearly communicates that we do not promote adoption or selling of dogs, only welfare and problem resolution.' },
 ];
 
 const commitmentCards = [
@@ -555,10 +555,10 @@ const commitmentCards = [
 ];
 
 const whyDogs = [
-  { title: 'Build Deep Expertise',  desc: 'Our team has specialized knowledge in canine behavior, health, and welfare' },
-  { title: 'Address Critical Need', desc: 'India has 35+ million street dogs — a massive population needing focused attention' },
-  { title: 'Public Health Impact',  desc: 'Dogs are the primary source of rabies — our work directly saves human lives' },
-  { title: 'Maximize Impact',       desc: 'By focusing our resources, we can help more dogs more effectively' },
+  { title: 'Build Deep Expertise',  desc: 'By working only with dogs, we develop a deeper understanding of dog behavior, health needs, injuries, and welfare challenges' },
+  { title: 'Address Critical Need', desc: 'Community dogs face daily risks such as accidents, disease, cruelty, and neglect. Our focused approach allows us to respond where help is most urgently needed.' },
+  { title: 'Protect Dog Welfare',  desc: 'Vaccination, medical care, and shelter support help prevent suffering and improve the overall health of community dogs' },
+  { title: 'Maximize Impact',       desc: 'A focused mission allows us to deliver consistent, measurable, and meaningful outcomes for dog welfare' },
 ];
 
 // ─── SUB-COMPONENTS ────────────────────────────────────────────────────────────
@@ -726,47 +726,76 @@ const MissionVisionPage = () => {
       `}</style>
 
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      <section
-        ref={heroRef.ref}
-        className="relative overflow-hidden"
-        style={{ background: 'linear-gradient(140deg, #001628 0%, #002b5c 60%, #003875 100%)', minHeight: '520px' }}
-      >
-        {/* Orbs */}
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-15" style={{ background: 'radial-gradient(circle, #ffd100, transparent)', filter: 'blur(110px)' }} />
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full opacity-10" style={{ background: 'radial-gradient(circle, #3b82f6, transparent)', filter: 'blur(70px)' }} />
-          <div className="absolute inset-0 opacity-[0.025]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,1) 1px,transparent 1px)', backgroundSize: '55px 55px' }} />
-          {['8%','72%','45%','88%','25%','60%'].map((left, i) => (
-            <div key={i} className="paw-float absolute select-none text-5xl text-white/[0.04]" style={{ top: `${8+i*15}%`, left, animationDelay: `${i*0.8}s` }}>🐾</div>
-          ))}
-        </div>
+     <section
+  ref={heroRef.ref}
+  className="relative overflow-hidden"
+  style={{ background: 'linear-gradient(140deg, #001628 0%, #002b5c 60%, #003875 100%)', minHeight: '400px' }}
+>
+  {/* Orbs */}
+  <div className="pointer-events-none absolute inset-0">
+    <div className="absolute top-0 right-0 w-72 h-72 sm:w-[600px] sm:h-[600px] rounded-full opacity-15"
+      style={{ background: 'radial-gradient(circle, #ffd100, transparent)', filter: 'blur(90px)' }} />
+    <div className="absolute bottom-0 left-0 w-56 h-56 sm:w-80 sm:h-80 rounded-full opacity-10"
+      style={{ background: 'radial-gradient(circle, #3b82f6, transparent)', filter: 'blur(60px)' }} />
+    <div className="absolute inset-0 opacity-[0.025]"
+      style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,1) 1px,transparent 1px)', backgroundSize: '55px 55px' }} />
+    {['8%','72%','45%','88%','25%','60%'].map((left, i) => (
+      <div key={i} className="paw-float absolute select-none text-4xl text-white/[0.04]"
+        style={{ top: `${8+i*15}%`, left, animationDelay: `${i*0.8}s` }}>🐾</div>
+    ))}
+  </div>
 
-        <div className={`relative z-10 max-w-7xl mx-auto px-6 md:px-14 py-28 flex flex-col items-center justify-center text-center rev ${heroRef.visible ? 'in' : ''}`} style={{ minHeight: '520px' }}>
-          <div className="inline-flex items-center gap-2 text-[#ffd100] font-black text-xs uppercase tracking-widest mb-6 px-5 py-2 rounded-full border border-[#ffd100]/25 bg-[#ffd100]/10">
-            <Compass size={13} /> Our Guiding Light
-          </div>
-          <h1 className="font-black text-white leading-tight mb-6 max-w-3xl" style={{ fontFamily: "'Playfair Display',serif", fontSize: 'clamp(2.8rem,5.5vw,4.5rem)', lineHeight: 1.05 }}>
-            Our Mission &<br />
-            <span style={{ color: '#ffd100', fontStyle: 'italic' }}>Vision</span>
-          </h1>
-          <p className="text-blue-200 text-lg leading-relaxed font-light max-w-2xl mb-12">
-            We are guided by a clear mission and vision that drives every action we take. Our work is rooted in compassion, integrity, and a deep commitment to creating a world where dogs and humans coexist peacefully.
-          </p>
-          <div className={`flex flex-wrap justify-center gap-0 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl px-2 py-4 stag ${heroRef.visible ? 'in' : ''}`} style={{ transitionDelay: '300ms' }}>
-            {[{ num: 25000, suffix: '+', label: 'Dogs Helped' }, { num: 60000, suffix: '+', label: 'Vaccinations' }, { num: 6, suffix: '', label: 'Centres' }, { num: 100, suffix: '+', label: 'Volunteers' }].map((s, i) => (
-              <div key={i} className={`px-8 py-2 ${i < 3 ? 'border-r border-white/15' : ''}`}>
-                <CountStat {...s} started={heroRef.visible} />
-              </div>
-            ))}
-          </div>
-        </div>
+  {/* Content */}
+  <div
+    className={`relative z-10 max-w-7xl mx-auto px-5 sm:px-8 md:px-14 py-12 sm:py-16 md:py-20 flex flex-col items-center justify-center text-center rev ${heroRef.visible ? 'in' : ''}`}
+    style={{ minHeight: '400px' }}
+  >
+    {/* Badge */}
+    <div className="inline-flex items-center gap-2 text-[#ffd100] font-black text-xs uppercase tracking-widest mb-4 px-4 py-1.5 rounded-full border border-[#ffd100]/25 bg-[#ffd100]/10">
+      <Compass size={12} /> Our Guiding Light
+    </div>
 
-        <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style={{ display: 'block', width: '100%', height: '60px' }}>
-            <path d="M0,35 C480,70 960,0 1440,35 L1440,70 L0,70 Z" fill="#ffffff" />
-          </svg>
+    {/* Heading */}
+    <h1
+      className="font-black text-white leading-tight mb-4 max-w-2xl"
+      style={{ fontFamily: "'Playfair Display',serif", fontSize: 'clamp(2rem, 5.5vw, 4rem)', lineHeight: 1.08 }}
+    >
+      Our Mission &<br />
+      <span style={{ color: '#ffd100', fontStyle: 'italic' }}>Vision</span>
+    </h1>
+
+    {/* Subtext */}
+    <p className="text-blue-200 text-sm sm:text-base leading-relaxed font-light max-w-xl mb-8 px-2">
+      Since 2010, Surana Dog NGO has worked exclusively for community dogs, providing medical care,
+      vaccination, injury treatment, shelter support, and humane problem resolution.
+    </p>
+
+    {/* Stats */}
+    {/* <div
+      className={`w-full max-w-xl sm:max-w-2xl grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/10 rounded-2xl overflow-hidden border border-white/10 stag ${heroRef.visible ? 'in' : ''}`}
+      style={{ transitionDelay: '300ms' }}
+    >
+      {[
+        { num: 5000, suffix: '+', label: 'Dogs Helped' },
+        { num: 1000, suffix: '+', label: 'Vaccinations' },
+        { num: 1,    suffix: '',  label: 'Centres' },
+        { num: 6,    suffix: '+', label: 'Volunteers' },
+      ].map((s, i) => (
+        <div key={i} className="bg-white/5 backdrop-blur-sm px-4 py-3 flex flex-col items-center justify-center">
+          <CountStat {...s} started={heroRef.visible} />
         </div>
-      </section>
+      ))}
+    </div> */}
+  </div>
+
+  {/* Wave */}
+  <div className="absolute bottom-0 left-0 right-0">
+    <svg viewBox="0 0 1440 55" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+      style={{ display: 'block', width: '100%', height: '45px' }}>
+      <path d="M0,28 C480,55 960,0 1440,28 L1440,55 L0,55 Z" fill="#ffffff" />
+    </svg>
+  </div>
+</section>
 
       {/* ── MISSION ──────────────────────────────────────────────────────── */}
       <section className="py-24 bg-white relative" ref={mvRef.ref}>
@@ -782,7 +811,7 @@ const MissionVisionPage = () => {
                   </div>
                   <h2 className="font-black text-[#002b5c] mb-4" style={{ fontFamily: "'Playfair Display',serif", fontSize: '2rem' }}>Our Mission</h2>
                   <p className="text-[#002b5c]/75 text-base leading-relaxed font-light">
-                    To provide compassionate care, medical treatment, and protection to community dogs while promoting peaceful coexistence between humans and animals through education, advocacy, and community engagement.
+                    Our mission is to safeguard community dogs by providing timely medical treatment, vaccination, injury care, and shelter support. We work to prevent cruelty, neglect, and illegal displacement while ensuring dogs live healthy lives in their natural territories.
                   </p>
                 </div>
                 {/* Navy bottom accent */}
@@ -844,9 +873,9 @@ const MissionVisionPage = () => {
                   <div className="w-16 h-16 bg-[#ffd100] rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-[#ffd100]/30">
                     <Eye size={30} className="text-[#002b5c]" />
                   </div>
-                  <h2 className="font-black text-white mb-4" style={{ fontFamily: "'Playfair Display',serif", fontSize: '2rem' }}>Our Vision</h2>
+                  <h2 className="font-black text-white mb-4" style={{ fontFamily: "'Playfair Display',serif", fontSize: '2rem' }}>Our Guiding Principles</h2>
                   <p className="text-blue-200 text-base leading-relaxed font-light">
-                    A world where every community dog lives a healthy, safe, and dignified life, and where humans and animals share spaces with mutual respect, understanding, and compassion.
+                    Our vision is a world where every community dog is healthy, protected, and treated with compassion. We strive for a future where dogs live free from injury, disease, cruelty, and neglect through consistent care and responsible action.
                   </p>
                 </div>
                 <div className="h-2" style={{ background: 'linear-gradient(90deg,#ffd100,#f97316)' }} />
@@ -857,7 +886,7 @@ const MissionVisionPage = () => {
       </section>
 
       {/* ── CORE VALUES ──────────────────────────────────────────────────── */}
-      <section className="py-24 bg-white relative" ref={valuesRef.ref}>
+      {/* <section className="py-24 bg-white relative" ref={valuesRef.ref}>
         <div className="max-w-7xl mx-auto px-6 md:px-14">
           <div className={`text-center mb-16 rev ${valuesRef.visible ? 'in' : ''}`}>
             <div className="pill-orange">Our Values</div>
@@ -870,10 +899,10 @@ const MissionVisionPage = () => {
             {coreValues.map((v, i) => <ValueCard key={i} index={i} {...v} />)}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── GUIDING PRINCIPLES ───────────────────────────────────────────── */}
-      <section className="py-24 dot-bg bg-slate-50 relative" ref={prinRef.ref}>
+      <section className="py-24 dot-bg  relative" ref={prinRef.ref}>
         <div className="max-w-7xl mx-auto px-6 md:px-14">
           <div className={`text-center mb-16 rev ${prinRef.visible ? 'in' : ''}`}>
             <div className="pill-orange">Non-Negotiables</div>
@@ -898,7 +927,7 @@ const MissionVisionPage = () => {
                 Why We Focus<br />
                 <span style={{ fontStyle: 'italic', color: '#f97316' }}>Exclusively on Dogs</span>
               </h2>
-              <p className="text-gray-500 text-base font-light mb-8 leading-relaxed">While all animals deserve care and protection, we have chosen to focus exclusively on community dogs. This specialization allows us to:</p>
+              <p className="text-gray-500 text-base font-light mb-8 leading-relaxed">Surana Dog NGO works exclusively for community dogs, ensuring focused care, quick response, and effective, humane solutions with long-term impact</p>
               <div className="space-y-2">
                 {whyDogs.map((w, i) => (
                   <div key={i} className="check-row">
@@ -961,7 +990,7 @@ const MissionVisionPage = () => {
       </section>
 
       {/* ── OUR COMMITMENT ───────────────────────────────────────────────── */}
-      <section className="py-24 relative overflow-hidden" ref={commitRef.ref} style={{ background: 'linear-gradient(135deg,#ffd100 0%,#ffec6e 50%,#ffd100 100%)' }}>
+      {/* <section className="py-24 relative overflow-hidden" ref={commitRef.ref} style={{ background: 'linear-gradient(135deg,#ffd100 0%,#ffec6e 50%,#ffd100 100%)' }}>
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: 'radial-gradient(circle,#002b5c 1px,transparent 1px)', backgroundSize: '28px 28px' }} />
           <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full opacity-20" style={{ background: 'radial-gradient(circle,#002b5c,transparent)', filter: 'blur(60px)' }} />
@@ -987,16 +1016,16 @@ const MissionVisionPage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── CTA ──────────────────────────────────────────────────────────── */}
-      <section className="py-24 relative overflow-hidden" ref={ctaRef.ref} style={{ background: 'linear-gradient(140deg,#001628 0%,#002b5c 100%)' }}>
+      <section className="py-24 relative overflow-hidden" ref={ctaRef.ref} style={{ background: 'linear-gradient(135deg,#ffd100 0%,#ffec6e 50%,#ffd100 100%)' }}>
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full opacity-15" style={{ background: 'radial-gradient(circle,#ffd100,transparent)', filter: 'blur(100px)' }} />
         </div>
         <div className={`max-w-3xl mx-auto px-6 text-center relative z-10 rev ${ctaRef.visible ? 'in' : ''}`}>
           <h2 className="font-black text-white mb-5" style={{ fontFamily: "'Playfair Display',serif", fontSize: 'clamp(2.3rem,5vw,3.6rem)', lineHeight: 1.1 }}>
-            Join Our <span style={{ color: '#ffd100', fontStyle: 'italic' }}>Mission</span>
+            Join Our <span style={{ color: '#002b5c', fontStyle: 'italic' }}>Mission</span>
           </h2>
           <p className="text-blue-200 text-lg font-light mb-10 max-w-xl mx-auto leading-relaxed">
             Help us create a world where every community dog lives a healthy, safe, and dignified life. Together, we can make a difference.

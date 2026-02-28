@@ -304,13 +304,49 @@ const GetInvolvedPage: React.FC = () => {
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const volunteerRoles = [
-    { title: 'Dog Walker', description: 'Help exercise and socialize our dogs while they wait for their forever homes.', commitment: '2-4 hours per week', img: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=260&fit=crop' },
-    { title: 'Foster Carer', description: 'Provide temporary care for dogs in your home while they await adoption.', commitment: 'Varies by dog', img: 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&h=260&fit=crop' },
-    { title: 'Event Helper', description: 'Support our fundraising events, awareness campaigns, and community activities.', commitment: 'Flexible', img: 'https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=400&h=260&fit=crop' },
-    { title: 'Administrative Support', description: 'Help with office tasks, data entry, and organizational support.', commitment: '4+ hours per week', img: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=260&fit=crop' },
-    { title: 'Photography', description: 'Take photos of our dogs to help them find homes through our website.', commitment: 'Flexible', img: 'https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=400&h=260&fit=crop' },
-    { title: 'Transport Volunteer', description: 'Help transport dogs between centres or to vet appointments.', commitment: 'As needed', img: 'https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400&h=260&fit=crop' },
-  ];
+  {
+    title: "Rescue Assistant",
+    description:
+      "Help during emergency rescue cases and injured dog support.",
+    button: "Learn More",
+    img: "https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?w=600",
+  },
+  {
+    title: "Vaccination Support",
+    description:
+      "Assist in anti-rabies and sterilization campaigns in communities.",
+    button: "Join Campaign",
+    img: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600",
+  },
+  {
+    title: "Event Helper",
+    description:
+      "Support awareness programs and community education drives.",
+    button: "Participate",
+    img: "https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=600",
+  },
+  {
+    title: "Administrative Support",
+    description:
+      "Help with data entry, case documentation, and reporting work.",
+    button: "Get Involved",
+    img: "https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=600",
+  },
+  {
+    title: "Photography Volunteer",
+    description:
+      "Capture rescue work and vaccination drives for awareness.",
+    button: "Volunteer",
+    img: "https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=600",
+  },
+  {
+    title: "Transport Volunteer",
+    description:
+      "Help safely transport injured dogs to clinics or shelter.",
+    button: "Apply",
+    img: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=600",
+  },
+];
 
   const fundraisingIdeas = [
     { emoji: '🏃', title: 'Sponsored Run', description: 'Join a marathon or fun run for charity', img: 'https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=300&h=200&fit=crop' },
@@ -323,12 +359,12 @@ const GetInvolvedPage: React.FC = () => {
 
   const corporateItems = ['Charity of the Year partnerships', 'Employee volunteering programs', 'Cause-related marketing campaigns', 'Sponsorship opportunities', 'Payroll giving schemes'];
 
-  const quickLinks = [
-    { label: 'Donate', emoji: '❤️', link: '/donate', img: 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=80&h=80&fit=crop' },
-    { label: 'Volunteer', emoji: '🙋', link: '#volunteer', img: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=80&h=80&fit=crop' },
-    { label: 'Fundraise', emoji: '💰', link: '#fundraise', img: 'https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=80&h=80&fit=crop' },
-    { label: 'Corporate', emoji: '🏢', link: '#corporate', img: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=80&h=80&fit=crop' },
-  ];
+  // const quickLinks = [
+  //   { label: 'Donate', emoji: '❤️', link: '/donate', img: 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=80&h=80&fit=crop' },
+  //   { label: 'Volunteer', emoji: '🙋', link: '#volunteer', img: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=80&h=80&fit=crop' },
+  //   { label: 'Fundraise', emoji: '💰', link: '#fundraise', img: 'https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=80&h=80&fit=crop' },
+  //   { label: 'Corporate', emoji: '🏢', link: '#corporate', img: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=80&h=80&fit=crop' },
+  // ];
 
   const validate = () => {
     const e: Record<string, string> = {};
@@ -521,7 +557,7 @@ const GetInvolvedPage: React.FC = () => {
         </section>
 
         {/* QUICK LINKS */}
-        <section className="gi-quick">
+        {/* <section className="gi-quick">
           <div className="gi-w">
             <div className="gi-qg">
               {quickLinks.map((q, i) => (
@@ -532,7 +568,7 @@ const GetInvolvedPage: React.FC = () => {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* VOLUNTEER */}
         <section className="gi-vol" id="volunteer">
@@ -587,7 +623,7 @@ const GetInvolvedPage: React.FC = () => {
         </section> */}
 
         {/* CORPORATE */}
-        <section className="gi-corp" id="corporate">
+        {/* <section className="gi-corp" id="corporate">
           <div className="gi-w">
             <div className="gi-cg">
               <div><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop" alt="Corporate" className="gi-cimg" /></div>
@@ -604,159 +640,149 @@ const GetInvolvedPage: React.FC = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* LEGACY */}
-        <section className="gi-leg" id="legacy">
-          <div className="gi-w">
-            <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=160&h=160&fit=crop" alt="Legacy" className="gi-legi" />
-            <h2>Leave a Lasting Legacy</h2>
-            <p>A gift in your will, no matter the size, helps ensure that future generations of dogs will receive the care and love they deserve. Legacy gifts fund nearly a third of our work.</p>
-            <div className="gi-legb">
-              <a href="#" className="gi-by">Learn About Legacy Giving</a>
-              <a href="#" className="gi-bwo">Request a Free Guide</a>
-            </div>
-          </div>
-        </section>
+        
 
         {/* ══════════════════════════════════════════
               VOLUNTEER APPLICATION FORM — PAGE KE END MEIN
         ══════════════════════════════════════════ */}
-        <section className="gi-fsec" id="apply-form">
-          <div className="gi-w">
-            <div className="gi-fcard">
-              {submitted ? (
-                <div className="gi-succ">
-                  <div className="gi-succ-tick">✓</div>
-                  <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=160&h=160&fit=crop" alt="Thank you" />
-                  <h2>Application Submit Ho Gayi! 🎉</h2>
-                  <p>Shukriya! Aapki volunteer application humein mil gayi hai. Hum 2-3 working days mein aapse contact karenge.</p>
-                  <button className="gi-bp" onClick={() => { setSubmitted(false); setFormData({ fullName:'', email:'', phone:'', age:'', city:'', role:'', availability:'', experience:'', motivation:'', agreeTerms:false }); }}>
-                    Naya Form Bharein
-                  </button>
-                </div>
-              ) : (
-                <>
-                  <div className="gi-fhdr">
-                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=160&h=160&fit=crop" alt="" className="gi-fhdr-img" />
-                    <h2>🐾 Volunteer Application Form</h2>
-                    <p>Hamare saath judein aur dogs ki zindagi behtar banane mein madad karein. Neeche form fill karein — hum jald hi aapse contact karenge!</p>
-                  </div>
+       <section className="gi-fsec" id="apply-form">
+  <div className="gi-w">
+    <div className="gi-fcard">
+      {submitted ? (
+        <div className="gi-succ">
+          <div className="gi-succ-tick">✓</div>
+          <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=160&h=160&fit=crop" alt="Thank you" />
+          <h2>Application Submitted Successfully! 🎉</h2>
+          <p>Thank you! We have received your volunteer application. We will contact you within 2-3 working days.</p>
+          <button className="gi-bp" onClick={() => { setSubmitted(false); setFormData({ fullName:'', email:'', phone:'', age:'', city:'', role:'', availability:'', experience:'', motivation:'', agreeTerms:false }); }}>
+            Submit New Form
+          </button>
+        </div>
+      ) : (
+        <>
+          <div className="gi-fhdr">
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=160&h=160&fit=crop" alt="" className="gi-fhdr-img" />
+            <h2>🐾 Volunteer Application Form</h2>
+            <p>Join us and help improve the lives of community dogs. Fill out the form below — we will get in touch with you soon!</p>
+          </div>
 
-                  {/* Section 1: Personal Info */}
-                  <div className="gi-divider">
-                    <div className="gi-divider-l" /><span className="gi-divider-t">Personal Information</span><div className="gi-divider-r" />
-                  </div>
-                  <div className="gi-fgrid">
-                    <div className="gi-fr2">
-                      <div className="gi-fld">
-                        <label><img src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=40&h=40&fit=crop" alt="" />Name <span className="req">*</span></label>
-                        <input name="fullName" value={formData.fullName} onChange={handleChange} placeholder=" Naam" className={`gi-inp ${errors.fullName?'er':''}`} />
-                        {errors.fullName && <span className="gi-em">⚠ {errors.fullName}</span>}
-                      </div>
-                      <div className="gi-fld">
-                        <label><img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=40&h=40&fit=crop" alt="" />Email Address <span className="req">*</span></label>
-                        <input name="email" value={formData.email} onChange={handleChange} type="email" placeholder="aapka@email.com" className={`gi-inp ${errors.email?'er':''}`} />
-                        {errors.email && <span className="gi-em">⚠ {errors.email}</span>}
-                      </div>
-                    </div>
-                    <div className="gi-fr2">
-                      <div className="gi-fld">
-                        <label><img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=40&h=40&fit=crop" alt="" />Phone Number <span className="req">*</span></label>
-                        <input name="phone" value={formData.phone} onChange={handleChange} type="tel" placeholder="+91 98765 43210" className={`gi-inp ${errors.phone?'er':''}`} />
-                        {errors.phone && <span className="gi-em">⚠ {errors.phone}</span>}
-                      </div>
-                      <div className="gi-fld">
-                        <label><img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=40&h=40&fit=crop" alt="" />Age (Age) <span className="req">*</span></label>
-                        <input name="age" value={formData.age} onChange={handleChange} type="number" min="16" max="70" placeholder="Apni umar" className={`gi-inp ${errors.age?'er':''}`} />
-                        {errors.age && <span className="gi-em">⚠ {errors.age}</span>}
-                      </div>
-                    </div>
-                    <div className="gi-fld">
-                      <label><img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=40&h=40&fit=crop" alt="" />City (City) <span className="req">*</span></label>
-                      <input name="city" value={formData.city} onChange={handleChange} placeholder="Aap kis shehar mein rehte hain?" className={`gi-inp ${errors.city?'er':''}`} />
-                      {errors.city && <span className="gi-em">⚠ {errors.city}</span>}
-                    </div>
-                  </div>
-
-                  {/* Section 2: Role */}
-                  <div className="gi-divider" style={{marginTop:12}}>
-                    <div className="gi-divider-l" /><span className="gi-divider-t">Role & Availability</span><div className="gi-divider-r" />
-                  </div>
-                  <div className="gi-fgrid">
-                    <div className="gi-fr2">
-                      <div className="gi-fld">
-                        <label><img src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?w=40&h=40&fit=crop" alt="" />Volunteer Role <span className="req">*</span></label>
-                        <select name="role" value={formData.role} onChange={handleChange} className={`gi-inp ${errors.role?'er':''}`}>
-                          <option value="">-- Role choose karein --</option>
-                          <option>Dog Walker</option>
-                          <option>Foster Carer</option>
-                          <option>Event Helper</option>
-                          <option>Administrative Support</option>
-                          <option>Photography</option>
-                          <option>Transport Volunteer</option>
-                          <option>Other / Kuch aur</option>
-                        </select>
-                        {errors.role && <span className="gi-em">⚠ {errors.role}</span>}
-                      </div>
-                      <div className="gi-fld">
-                        <label><img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=40&h=40&fit=crop" alt="" />Availability <span className="req">*</span></label>
-                        <select name="availability" value={formData.availability} onChange={handleChange} className={`gi-inp ${errors.availability?'er':''}`}>
-                          <option value="">--  time --</option>
-                          <option>Sirf Weekdays</option>
-                          <option>Sirf Weekends</option>
-                          <option>Weekdays + Weekends dono</option>
-                          <option>Flexible hoon</option>
-                          <option>1-2 ghante/hafta</option>
-                          <option>3-5 ghante/hafta</option>
-                          <option>5+ ghante/hafta</option>
-                        </select>
-                        {errors.availability && <span className="gi-em">⚠ {errors.availability}</span>}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Section 3: About You */}
-                  <div className="gi-divider" style={{marginTop:12}}>
-                    <div className="gi-divider-l" /><span className="gi-divider-t">About You</span><div className="gi-divider-r" />
-                  </div>
-                  <div className="gi-fgrid">
-                    <div className="gi-fld">
-                      <label><img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=40&h=40&fit=crop" alt="" /> Experience (Optional)</label>
-                      <textarea name="experience" value={formData.experience} onChange={handleChange as any} rows={3} placeholder="Kya aapne pehle kisi NGO ya animal shelter mein kaam kiya hai? Batayein..." className="gi-inp" style={{resize:'vertical',minHeight:88}} />
-                    </div>
-                    <div className="gi-fld">
-                      <label><img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=40&h=40&fit=crop" alt="" />Volunteer  <span className="req">*</span></label>
-                      <textarea name="motivation" value={formData.motivation} onChange={handleChange as any} rows={4} placeholder="Apni baat likhein — kya cheez aapko yahan layi? Aap kaise contribute karna chahte hain?..." className={`gi-inp ${errors.motivation?'er':''}`} style={{resize:'vertical',minHeight:110}} />
-                      {errors.motivation && <span className="gi-em">⚠ {errors.motivation}</span>}
-                    </div>
-                    <div>
-                      <div className={`gi-chkr ${errors.agreeTerms?'er':''}`} onClick={() => { setFormData(p=>({...p,agreeTerms:!p.agreeTerms})); setErrors(p=>{const n={...p};delete n.agreeTerms;return n;}); }}>
-                        <input type="checkbox" name="agreeTerms" checked={formData.agreeTerms} onChange={handleChange} onClick={e=>e.stopPropagation()} />
-                        <span> <strong style={{color:'var(--N)'}}>Terms & Conditions *</strong></span>
-                      </div>
-                      {errors.agreeTerms && <span className="gi-em" style={{marginTop:6,display:'block'}}>⚠ {errors.agreeTerms}</span>}
-                    </div>
-                    <button className="gi-sub" onClick={handleSubmit}>
-                      <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=60&h=60&fit=crop" alt="" />
-                      Application Submit Karein 🐾
-                    </button>
-                  </div>
-                </>
-              )}
+          {/* Section 1: Personal Info */}
+          <div className="gi-divider">
+            <div className="gi-divider-l" /><span className="gi-divider-t">Personal Information</span><div className="gi-divider-r" />
+          </div>
+          <div className="gi-fgrid">
+            <div className="gi-fr2">
+              <div className="gi-fld">
+                <label><img src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=40&h=40&fit=crop" alt="" />Full Name <span className="req">*</span></label>
+                <input name="fullName" value={formData.fullName} onChange={handleChange} placeholder="Your full name" className={`gi-inp ${errors.fullName?'er':''}`} />
+                {errors.fullName && <span className="gi-em">⚠ {errors.fullName}</span>}
+              </div>
+              <div className="gi-fld">
+                <label><img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=40&h=40&fit=crop" alt="" />Email Address <span className="req">*</span></label>
+                <input name="email" value={formData.email} onChange={handleChange} type="email" placeholder="your@email.com" className={`gi-inp ${errors.email?'er':''}`} />
+                {errors.email && <span className="gi-em">⚠ {errors.email}</span>}
+              </div>
+            </div>
+            <div className="gi-fr2">
+              <div className="gi-fld">
+                <label><img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=40&h=40&fit=crop" alt="" />Phone Number <span className="req">*</span></label>
+                <input name="phone" value={formData.phone} onChange={handleChange} type="tel" placeholder="+91 98765 43210" className={`gi-inp ${errors.phone?'er':''}`} />
+                {errors.phone && <span className="gi-em">⚠ {errors.phone}</span>}
+              </div>
+              <div className="gi-fld">
+                <label><img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=40&h=40&fit=crop" alt="" />Age <span className="req">*</span></label>
+                <input name="age" value={formData.age} onChange={handleChange} type="number" min="16" max="70" placeholder="Your age" className={`gi-inp ${errors.age?'er':''}`} />
+                {errors.age && <span className="gi-em">⚠ {errors.age}</span>}
+              </div>
+            </div>
+            <div className="gi-fld">
+              <label><img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=40&h=40&fit=crop" alt="" />City <span className="req">*</span></label>
+              <input name="city" value={formData.city} onChange={handleChange} placeholder="Which city do you live in?" className={`gi-inp ${errors.city?'er':''}`} />
+              {errors.city && <span className="gi-em">⚠ {errors.city}</span>}
             </div>
           </div>
-        </section>
+
+          {/* Section 2: Role */}
+          <div className="gi-divider" style={{marginTop:12}}>
+            <div className="gi-divider-l" /><span className="gi-divider-t">Role & Availability</span><div className="gi-divider-r" />
+          </div>
+          <div className="gi-fgrid">
+            <div className="gi-fr2">
+              <div className="gi-fld">
+                <label><img src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?w=40&h=40&fit=crop" alt="" />Volunteer Role <span className="req">*</span></label>
+                <select name="role" value={formData.role} onChange={handleChange} className={`gi-inp ${errors.role?'er':''}`}>
+                  <option value="">-- Select a role --</option>
+                  <option>Dog Walker</option>
+                  <option>Foster Carer</option>
+                  <option>Event Helper</option>
+                  <option>Administrative Support</option>
+                  <option>Photography</option>
+                  <option>Transport Volunteer</option>
+                  <option>Other</option>
+                </select>
+                {errors.role && <span className="gi-em">⚠ {errors.role}</span>}
+              </div>
+              <div className="gi-fld">
+                <label><img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=40&h=40&fit=crop" alt="" />Availability <span className="req">*</span></label>
+                <select name="availability" value={formData.availability} onChange={handleChange} className={`gi-inp ${errors.availability?'er':''}`}>
+                  <option value="">-- Select availability --</option>
+                  <option>Weekdays Only</option>
+                  <option>Weekends Only</option>
+                  <option>Both Weekdays & Weekends</option>
+                  <option>Flexible</option>
+                  <option>1-2 hours/week</option>
+                  <option>3-5 hours/week</option>
+                  <option>5+ hours/week</option>
+                </select>
+                {errors.availability && <span className="gi-em">⚠ {errors.availability}</span>}
+              </div>
+            </div>
+          </div>
+
+          {/* Section 3: About You */}
+          <div className="gi-divider" style={{marginTop:12}}>
+            <div className="gi-divider-l" /><span className="gi-divider-t">About You</span><div className="gi-divider-r" />
+          </div>
+          <div className="gi-fgrid">
+            <div className="gi-fld">
+              <label><img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=40&h=40&fit=crop" alt="" />Prior Experience (Optional)</label>
+              <textarea name="experience" value={formData.experience} onChange={handleChange as any} rows={3} placeholder="Have you previously worked with any NGO or animal shelter? Tell us about it..." className="gi-inp" style={{resize:'vertical',minHeight:88}} />
+            </div>
+            <div className="gi-fld">
+              <label><img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=40&h=40&fit=crop" alt="" />Your Motivation <span className="req">*</span></label>
+              <textarea name="motivation" value={formData.motivation} onChange={handleChange as any} rows={4} placeholder="Tell us about yourself — what brought you here? How would you like to contribute?..." className={`gi-inp ${errors.motivation?'er':''}`} style={{resize:'vertical',minHeight:110}} />
+              {errors.motivation && <span className="gi-em">⚠ {errors.motivation}</span>}
+            </div>
+            <div>
+              <div className={`gi-chkr ${errors.agreeTerms?'er':''}`} onClick={() => { setFormData(p=>({...p,agreeTerms:!p.agreeTerms})); setErrors(p=>{const n={...p};delete n.agreeTerms;return n;}); }}>
+                <input type="checkbox" name="agreeTerms" checked={formData.agreeTerms} onChange={handleChange} onClick={e=>e.stopPropagation()} />
+                <span> <strong style={{color:'var(--N)'}}>I agree to the Terms & Conditions *</strong></span>
+              </div>
+              {errors.agreeTerms && <span className="gi-em" style={{marginTop:6,display:'block'}}>⚠ {errors.agreeTerms}</span>}
+            </div>
+            <button className="gi-sub" onClick={handleSubmit}>
+              <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=60&h=60&fit=crop" alt="" />
+              Submit Application 🐾
+            </button>
+          </div>
+        </>
+      )}
+    </div>
+  </div>
+</section>
 
         {/* CTA */}
-        <section className="gi-cta">
+        {/* <section className="gi-cta">
           <div className="gi-w">
             <img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=160&h=160&fit=crop" alt="" className="gi-cta-img" />
             <h2>Ready to Make a Difference?</h2>
             <p>Every contribution, big or small, helps us save more dogs. Start your journey with us today.</p>
             <Link to="/contact" className="gi-bp" style={{display:'inline-flex'}}>Get Started →</Link>
           </div>
-        </section>
+        </section> */}
 
       </div>
     </>

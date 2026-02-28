@@ -842,23 +842,95 @@ export const DonatePage: React.FC = () => {
       `}</style>
 
       {/* ── HERO ── */}
-      <section style={styles.hero}>
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E\")" }} />
-        <div style={{ position: 'relative' }}>
-          <div className="pulse-icon" style={{ fontSize: 64, marginBottom: 16 }}>🐾</div>
-          <h1 style={styles.heroTitle} className="fade-in">Help Us Save More Lives</h1>
-          <p style={styles.heroSub} className="fade-in">Your donation rescues injured street dogs, funds medical care, and finds loving homes. Every rupee makes a difference.</p>
-          <div style={styles.statsRow}>
-            {[{ n: 4800, s: '+', l: 'Dogs Rescued' }, { n: 12000, s: '+', l: 'Treatments' }, { n: 3200, s: '+', l: 'Adoptions' }, { n: 98, s: '%', l: 'Survival Rate' }].map((st, i) => (
-              <div key={i} style={styles.statItem}>
-                <div style={styles.statNum}><AnimCounter target={st.n} suffix={st.s} /></div>
-                <div style={styles.statLabel}>{st.l}</div>
-              </div>
-            ))}
+     <section
+  style={{
+    ...styles.hero,
+    minHeight: '320px',        // ✅ height kam
+    padding: '40px 20px 60px', // ✅ padding reduce
+    position: 'relative',
+    overflow: 'hidden',
+    textAlign: 'center',
+  }}
+>
+  {/* Background pattern */}
+  <div style={{
+    position: 'absolute', inset: 0,
+    backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E\")",
+  }} />
+
+  <div style={{ position: 'relative', maxWidth: '700px', margin: '0 auto' }}>
+
+    {/* Paw icon */}
+    <div
+      className="pulse-icon"
+      style={{ fontSize: 'clamp(36px, 8vw, 56px)', marginBottom: 10 }}
+    >🐾</div>
+
+    {/* Title */}
+    <h1
+      className="fade-in"
+      style={{
+        ...styles.heroTitle,
+        fontSize: 'clamp(1.6rem, 5vw, 3rem)',
+        lineHeight: 1.1,
+        marginBottom: 12,
+        padding: '0 8px',
+      }}
+    >
+      Help Us Save More Lives
+    </h1>
+
+    {/* Subtitle */}
+    <p
+      className="fade-in"
+      style={{
+        ...styles.heroSub,
+        fontSize: 'clamp(0.85rem, 2.5vw, 1.05rem)',
+        lineHeight: 1.6,
+        marginBottom: 28,
+        padding: '0 8px',
+        maxWidth: '560px',
+        margin: '0 auto 24px',
+      }}
+    >
+      Your donation rescues injured street dogs, funds medical care, and finds loving homes.
+      Every rupee makes a difference.
+    </p>
+
+    {/* Stats — 2 cols on mobile, 4 on desktop */}
+    <div style={{
+      display: 'grid',
+      gridTemplateColumns: 'repeat(2, 1fr)',
+      gap: '10px',
+      maxWidth: '500px',
+      margin: '0 auto',
+    }}
+      className="sm:grid-cols-4"
+    >
+      {[
+        { n: 4800,  s: '+', l: 'Dogs Rescued'   },
+        { n: 12000, s: '+', l: 'Treatments'      },
+        { n: 3200,  s: '+', l: 'Adoptions'       },
+        { n: 98,    s: '%', l: 'Survival Rate'   },
+      ].map((st, i) => (
+        <div key={i} style={{
+          ...styles.statItem,
+          padding: '10px 8px',
+          borderRadius: '10px',
+          background: 'rgba(255,255,255,0.07)',
+        }}>
+          <div style={{ ...styles.statNum, fontSize: 'clamp(1.3rem, 4vw, 1.8rem)' }}>
+            <AnimCounter target={st.n} suffix={st.s} />
+          </div>
+          <div style={{ ...styles.statLabel, fontSize: 'clamp(0.68rem, 2vw, 0.8rem)' }}>
+            {st.l}
           </div>
         </div>
-      </section>
+      ))}
+    </div>
 
+  </div>
+</section>
       {/* ── DONATE / VOLUNTEER TAB CARD ── */}
      
 
@@ -927,7 +999,7 @@ export const DonatePage: React.FC = () => {
       </section>
 
       {/* ── IMPACT ── */}
-      <section style={styles.impactSection}>
+      {/* <section style={styles.impactSection}>
         <div style={{ maxWidth: 960, margin: '0 auto' }}>
           <span style={styles.sectionLabel}>Your Impact</span>
           <h2 style={styles.sectionTitle}>How Your Donation Helps</h2>
@@ -945,10 +1017,10 @@ export const DonatePage: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── WAYS TO GIVE ── */}
-      <section style={styles.waysSection}>
+      {/* <section style={styles.waysSection}>
         <div style={{ maxWidth: 960, margin: '0 auto' }}>
           <h2 style={{ ...styles.sectionTitle, marginBottom: 8 }}>More Ways to Give</h2>
           <p style={{ ...styles.sectionSub, marginBottom: 40 }}>Support us however works best for you.</p>
@@ -969,10 +1041,10 @@ export const DonatePage: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── TRUST BAR ── */}
-      <div style={styles.trustBar}>
+      {/* <div style={styles.trustBar}>
         <div style={styles.trustRow}>
           {[{ i: '🏛️', t: 'Registered NGO' }, { i: '📋', t: '80G Tax Exemption' }, { i: '✅', t: 'FCRA Compliant' }, { i: '🔍', t: '100% Transparency' }, { i: '🔒', t: 'Secure Payments' }].map((b, i) => (
             <div key={i} style={styles.trustBadge}>
@@ -980,10 +1052,10 @@ export const DonatePage: React.FC = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* ── FAQ ── */}
-      <section style={{ padding: '80px 20px' }}>
+      {/* <section style={{ padding: '80px 20px' }}>
         <div style={{ maxWidth: 720, margin: '0 auto' }}>
           <h2 style={{ ...styles.sectionTitle, marginBottom: 40 }}>Frequently Asked Questions</h2>
           {faqs.map((faq, i) => (
@@ -996,7 +1068,7 @@ export const DonatePage: React.FC = () => {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* ── CTA ── */}
       <section style={styles.ctaSection}>

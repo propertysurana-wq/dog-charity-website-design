@@ -121,7 +121,7 @@ const ContactUsPage: React.FC = () => {
               href="tel:+919876543210"
               className="text-2xl md:text-3xl font-bold text-white hover:text-yellow-300 transition-colors"
             >
-              +91 98765 43210
+              +91 9999999999
             </a>
             <span className="text-red-100 flex items-center gap-2">
               <Clock className="w-5 h-5" />
@@ -146,7 +146,7 @@ const ContactUsPage: React.FC = () => {
                 href="tel:+919876543210"
                 className="block text-2xl font-bold text-red-600 hover:text-red-700"
               >
-                +91 98765 43210
+                +91 9999999999
               </a>
               <p className="text-gray-500 text-sm mt-2">24/7 Available</p>
             </div>
@@ -164,7 +164,7 @@ const ContactUsPage: React.FC = () => {
                 rel="noopener noreferrer"
                 className="block text-2xl font-bold text-green-600 hover:text-green-700"
               >
-                +91 98765 43210
+                +91 9999999999
               </a>
               <p className="text-gray-500 text-sm mt-2">Quick Response</p>
             </div>
@@ -180,7 +180,7 @@ const ContactUsPage: React.FC = () => {
                 href="mailto:info@suranaNGO.org"
                 className="block text-xl font-bold text-blue-600 hover:text-blue-700 break-all"
               >
-                info@suranaNGO.org
+                suranadogngo@gmail.com
               </a>
               <p className="text-gray-500 text-sm mt-2">Response within 24 hours</p>
             </div>
@@ -270,7 +270,7 @@ const ContactUsPage: React.FC = () => {
                   <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center">
                     <AlertTriangle className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-navy-900">Reporting Animal Cruelty</h3>
+                  <h3 className="text-xl font-bold text-navy-900">Reporting dog Cruelty</h3>
                 </div>
                 <ol className="space-y-3 text-gray-700">
                   <li className="flex items-start gap-2">
@@ -283,7 +283,7 @@ const ContactUsPage: React.FC = () => {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="w-6 h-6 bg-purple-500 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">3</span>
-                    <span><strong>Call us:</strong> +91 98765 43210 immediately</span>
+                    <span><strong>Call us:</strong> +91 9999999999 immediately</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="w-6 h-6 bg-purple-500 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">4</span>
@@ -367,7 +367,7 @@ const ContactUsPage: React.FC = () => {
                     </label>
                     {formData.urgent && (
                       <p className="mt-2 text-red-700 text-sm">
-                        For emergencies, please also call: <strong>+91 98765 43210</strong>
+                        For emergencies, please also call: <strong>+91 9999999999</strong>
                       </p>
                     )}
                   </div>
@@ -403,7 +403,7 @@ const ContactUsPage: React.FC = () => {
                         onChange={handleChange}
                         required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
-                        placeholder="+91 98765 43210"
+                        placeholder="+91 9999999999"
                       />
                     </div>
                   </div>
@@ -499,7 +499,7 @@ const ContactUsPage: React.FC = () => {
       </section>
 
       {/* Service Areas Section */}
-      <section className="py-16 lg:py-24 bg-white">
+      {/* <section className="py-16 lg:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -534,7 +534,7 @@ const ContactUsPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Office Location Section */}
       <section className="py-16 lg:py-24 bg-navy-900 text-white">

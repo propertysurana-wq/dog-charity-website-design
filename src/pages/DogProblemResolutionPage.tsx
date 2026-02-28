@@ -428,37 +428,43 @@ function useReveal(threshold = 0.1) {
 }
 
 // ─── DATA ──────────────────────────────────────────────────────────────────────
+
+
+
+
+
+
 const commonProblems = [
   {
-    title: 'Fear of Dogs',
-    description: 'Many people feel scared of community dogs. We help by assessing dog behavior and educating residents about how to safely interact with dogs.',
-    img: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=280&fit=crop',
+    title: "Injured Street Dogs",
+    description: "We rescue injured or sick community dogs and provide immediate medical treatment and recovery support.",
+     img: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=280&fit=crop',
   },
   {
-    title: 'Aggressive Behavior',
-    description: 'If a dog shows aggression, we investigate the cause (territorial, fear-based, or illness) and implement appropriate behavioral interventions.',
-    img: 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&h=280&fit=crop',
+    title: "Vaccination Support",
+    description: "We conduct anti-rabies and health vaccination drives to prevent disease and ensure public safety.",
+     img: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=280&fit=crop',
   },
   {
-    title: 'Excessive Barking',
-    description: 'Barking often has a reason—hunger, territorial behavior, or distress. We identify the cause and work with the community to address it.',
-    img: 'https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=400&h=280&fit=crop',
+    title: "Excessive Barking Complaints",
+    description: "Our team assesses the cause of barking and works on humane behavioral and environmental solutions.",
+     img: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=280&fit=crop',
   },
   {
-    title: 'Puppies in Danger',
-    description: 'Newborn puppies are vulnerable. We ensure they are safe, healthy, and protected while educating communities about caring for them.',
-    img: 'https://images.unsplash.com/photo-1601979031925-424e53b6caaa?w=400&h=280&fit=crop',
+    title: "Aggressive Behavior",
+    description: "We investigate aggression issues and take necessary steps like medical checkups or supervision.",
+     img: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=280&fit=crop',
   },
   {
-    title: 'Dog Packs',
-    description: 'Groups of dogs can be concerning for residents. We manage pack dynamics through sterilization programs and behavioral assessment.',
-    img: 'https://images.unsplash.com/photo-1588943211346-0908a1fb0b01?w=400&h=280&fit=crop',
+    title: "Dog Fight Situations",
+   description: "We safely handle dog conflicts and reduce territorial fights through proper intervention.",
+     img: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=280&fit=crop',
   },
   {
-    title: 'Dogs Near Schools / Markets',
-    description: 'We work with local authorities and communities to ensure dogs and humans can coexist safely in public spaces.',
-    img: 'https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=400&h=280&fit=crop',
-  },
+    title: "Community Safety Concerns",
+    description: "If residents feel unsafe, we visit the area and provide responsible and legal solutions.",
+     img: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=280&fit=crop',
+  }
 ];
 
 const resolutionProcess = [
@@ -471,31 +477,55 @@ const resolutionProcess = [
 ];
 
 const approachChecks = [
-  { title: 'On-Site Professional Assessment', desc: 'Our trained team evaluates the situation in person' },
-  { title: 'Root Cause Analysis',             desc: 'We identify why the problem is occurring' },
-  { title: 'Community Education',             desc: 'We teach residents how to coexist safely with dogs' },
-  { title: 'Follow-Up Support',               desc: 'We ensure the solution continues to work' },
+  {
+    title: "On-Site Assessment",
+    desc: "Our team visits the location to understand the issue before taking action."
+  },
+  {
+    title: "Vaccination & Health Check",
+    desc: "We conduct anti-rabies vaccination and basic health support for community dogs."
+  },
+  {
+    title: "Injury & Emergency Care",
+    desc: "Injured or sick dogs are rescued and provided immediate medical treatment."
+  },
+  {
+    title: "Shelter & Recovery Support",
+    desc: "We provide temporary shelter and follow-up care until full recovery."
+  }
 ];
 
 const doNotDo = [
-  { title: 'Forcibly relocate dogs',       desc: 'Moving dogs to another area is illegal and does not solve the problem.' },
-  { title: 'Use cruel methods',            desc: 'We never use poison, traps, or any form of cruelty.' },
-  { title: 'Ignore resident concerns',     desc: 'We take every complaint seriously and work to find a solution.' },
-  { title: 'Abandon after assessment',     desc: 'We follow through until the problem is fully resolved.' },
+ {
+    title: "Illegal Relocation",
+    desc: "Community dogs are protected by law and cannot be forcibly removed from their territory."
+  },
+  {
+    title: "Cruel Methods",
+    desc: "We strictly avoid poison, harmful traps, or any form of cruelty."
+  },
+  {
+    title: "Ignoring Complaints",
+    desc: "Every society concern is assessed and addressed responsibly."
+  },
+  {
+    title: "Abandoning Cases",
+    desc: "We follow through until the issue is properly resolved."
+  }
 ];
 
 const behaviorTips = [
-  'Dogs bark to communicate—not always as aggression',
-  'Running away triggers chase instinct—stay calm instead',
-  'Most dogs are territorial, not aggressive',
-  'Dogs can sense fear—stay relaxed and confident',
+  'Dogs bark as a form of communication and territory protection',
+  'Sudden running or shouting may trigger defensive reactions',
+  'Vaccinated and monitored dogs are generally safe in their area',
+  'Most aggression is caused by fear, injury, or disturbance',
 ];
 
 const helpTips = [
-  'Provide water and food if possible',
-  'Report injured dogs to us immediately',
-  'Never throw stones or chase dogs away',
-  'Educate children about safe behavior around dogs',
+  'Contact Surana Dog NGO for vaccination or emergency support',
+  'Allow our team to assess before taking any action',
+  'Encourage peaceful coexistence in your society',
+  'Help spread awareness about humane animal care',
 ];
 
 // ─── SUB-COMPONENTS ────────────────────────────────────────────────────────────
@@ -649,74 +679,92 @@ const DogProblemResolutionPage = () => {
       `}</style>
 
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      <section
-        ref={heroRef.ref}
-        className="relative overflow-hidden"
-        style={{ background: 'linear-gradient(140deg,#001628 0%,#002b5c 55%,#003875 100%)', minHeight: '520px' }}
+     <section
+  ref={heroRef.ref}
+  className="relative overflow-hidden"
+  style={{ background: 'linear-gradient(140deg,#001628 0%,#002b5c 55%,#003875 100%)', minHeight: '360px' }}
+>
+  {/* bg dog image overlay */}
+  <div className="absolute inset-0 z-0">
+    <img
+      src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1920&h=700&fit=crop"
+      alt="" className="w-full h-full object-cover opacity-15"
+    />
+    <div className="absolute inset-0"
+      style={{ background: 'linear-gradient(180deg, rgba(0,22,40,0.95) 0%, rgba(0,43,92,0.8) 60%, rgba(0,43,92,0.7) 100%)' }} />
+    <div className="absolute inset-0 hidden md:block"
+      style={{ background: 'linear-gradient(90deg, rgba(0,22,40,0.95) 0%, rgba(0,43,92,0.8) 55%, transparent 100%)' }} />
+  </div>
+
+  {/* Orbs */}
+  <div className="pointer-events-none absolute inset-0">
+    <div className="absolute top-0 right-0 w-64 h-64 sm:w-[500px] sm:h-[500px] rounded-full opacity-10"
+      style={{ background: 'radial-gradient(circle,#ffd100,transparent)', filter: 'blur(80px)' }} />
+    {['8%','74%','50%','86%','28%'].map((left, i) => (
+      <div key={i} className="paw-float absolute select-none text-4xl"
+        style={{ top: `${10+i*16}%`, left, color: 'rgba(255,255,255,0.03)', animationDelay: `${i*0.9}s` }}>🐾</div>
+    ))}
+  </div>
+
+  {/* Content */}
+  <div
+    className={`relative z-10 max-w-7xl mx-auto px-5 sm:px-8 md:px-14 py-9 sm:py-14 md:py-20 flex flex-col justify-center rev ${heroRef.visible ? 'in' : ''}`}
+    style={{ minHeight: '360px' }}
+  >
+    {/* Back link */}
+    <Link to="/our-work"
+      className="inline-flex items-center gap-2 text-white/60 hover:text-[#ffd100] mb-5 text-sm font-medium transition-colors duration-300 self-start">
+      <ArrowLeft size={15} /> Back to Our Work
+    </Link>
+
+    <div className="max-w-2xl mx-auto md:mx-0 text-center md:text-left">
+
+      {/* Badge */}
+      <div className="inline-flex items-center gap-2 text-[#ffd100] font-black text-xs uppercase tracking-widest mb-4 px-4 py-1.5 rounded-full border border-[#ffd100]/25 bg-[#ffd100]/10">
+        🐾 Dog Problem
+      </div>
+
+      {/* Heading */}
+      <h1
+        className="font-black text-white leading-tight mb-4"
+        style={{ fontFamily: "'Playfair Display',serif", fontSize: 'clamp(1.9rem, 5vw, 4rem)', lineHeight: 1.08 }}
       >
-        {/* bg dog image overlay */}
-        <div className="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1920&h=700&fit=crop" alt="" className="w-full h-full object-cover opacity-15" />
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(90deg, rgba(0,22,40,0.95) 0%, rgba(0,43,92,0.8) 55%, transparent 100%)' }} />
-        </div>
-        {/* Orbs */}
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full opacity-10" style={{ background: 'radial-gradient(circle,#ffd100,transparent)', filter: 'blur(90px)' }} />
-          {['8%','74%','50%','86%','28%'].map((left, i) => (
-            <div key={i} className="paw-float absolute select-none text-5xl" style={{ top: `${10+i*16}%`, left, color: 'rgba(255,255,255,0.03)', animationDelay: `${i*0.9}s` }}>🐾</div>
-          ))}
-        </div>
+        Dog Problem<br />
+        <span style={{ color: '#ffd100', fontStyle: 'italic' }}>Resolution & Care Support</span>
+      </h1>
 
-        <div className={`relative z-10 max-w-7xl mx-auto px-6 md:px-14 py-28 flex flex-col justify-center rev ${heroRef.visible ? 'in' : ''}`} style={{ minHeight: '520px' }}>
-          <Link to="/our-work" className="inline-flex items-center gap-2 text-white/60 hover:text-[#ffd100] mb-7 text-sm font-medium transition-colors duration-300">
-            <ArrowLeft size={16} /> Back to Our Work
-          </Link>
+      {/* Subtext */}
+      <p className="text-blue-200 text-sm sm:text-base leading-relaxed font-light mb-7 max-w-xl mx-auto md:mx-0">
+        We work for the safety, health, and peaceful coexistence of community dogs and society members.
+        From vaccination and injury care to resolving complaints.
+      </p>
 
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 text-[#ffd100] font-black text-xs uppercase tracking-widest mb-5 px-4 py-2 rounded-full border border-[#ffd100]/25 bg-[#ffd100]/10">
-              🐕 Dog Problem Resolution
-            </div>
-            <h1 className="font-black text-white leading-tight mb-6" style={{ fontFamily: "'Playfair Display',serif", fontSize: 'clamp(2.6rem,5vw,4.2rem)', lineHeight: 1.05 }}>
-              Dog Problem<br />
-              <span style={{ color: '#ffd100', fontStyle: 'italic' }}>Resolution</span>
-            </h1>
-            <p className="text-blue-200 text-lg leading-relaxed font-light mb-10 max-w-xl">
-              We handle complaints related to community dogs with humane, on-site assessment and peaceful solutions. Our goal is to resolve conflicts between dogs and humans without causing harm to either.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <a href="tel:+919876543210" className="btn-gold inline-flex items-center gap-2 px-8 py-4 rounded-2xl font-bold shadow-xl">
-                <Phone size={17} /> Call Us Now
-              </a>
-              <Link to="/contact" className="btn-outline-w inline-flex items-center gap-2 px-8 py-4 rounded-2xl font-bold border-2 border-white/30 text-white">
-                Submit Complaint <ArrowRight size={16} />
-              </Link>
-            </div>
-          </div>
-        </div>
+      {/* Buttons */}
+      <div className="flex flex-row flex-wrap gap-3 justify-center md:justify-start">
+        <a href="tel:+919876543210"
+          className="btn-gold inline-flex items-center gap-2 px-5 sm:px-7 py-3 rounded-2xl font-bold shadow-xl text-sm sm:text-base whitespace-nowrap">
+          <Phone size={15} /> Call Us Now
+        </a>
+        <Link to="/contact"
+          className="btn-outline-w inline-flex items-center gap-2 px-5 sm:px-7 py-3 rounded-2xl font-bold border-2 border-white/30 text-white text-sm sm:text-base whitespace-nowrap">
+          Submit Complaint <ArrowRight size={15} />
+        </Link>
+      </div>
 
-        {/* wave */}
-        <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style={{ display: 'block', width: '100%', height: '60px' }}>
-            <path d="M0,35 C480,70 960,0 1440,35 L1440,70 L0,70 Z" fill="#ffffff" />
-          </svg>
-        </div>
-      </section>
+    </div>
+  </div>
+
+  {/* Wave */}
+  <div className="absolute bottom-0 left-0 right-0">
+    <svg viewBox="0 0 1440 55" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+      style={{ display: 'block', width: '100%', height: '45px' }}>
+      <path d="M0,28 C480,55 960,0 1440,28 L1440,55 L0,55 Z" fill="#ffffff" />
+    </svg>
+  </div>
+</section>
 
       {/* ── KEY MESSAGE BANNER ───────────────────────────────────────────── */}
-      <section className="py-6 bg-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="key-msg flex flex-col md:flex-row items-center gap-5 bg-[#002b5c] rounded-3xl px-8 py-6 shadow-xl">
-            <div className="w-14 h-14 bg-[#ffd100] rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
-              <Shield size={26} className="text-[#002b5c]" />
-            </div>
-            <p className="text-white text-base leading-relaxed text-center md:text-left font-light">
-              <span className="font-black text-[#ffd100]">Important: </span>
-              We never forcibly relocate dogs. Community dogs have a legal right to live in their territory. Our solutions are always humane and lawful.
-            </p>
-          </div>
-        </div>
-      </section>
-
+    
       {/* ── COMMON PROBLEMS ──────────────────────────────────────────────── */}
       <section className="py-24 bg-white relative" ref={problemsRef.ref}>
         <div className="max-w-7xl mx-auto px-6 md:px-14">
@@ -746,9 +794,9 @@ const DogProblemResolutionPage = () => {
                 <span style={{ fontStyle: 'italic', color: '#f97316' }}>Peaceful Solutions</span>
               </h2>
               <div className="space-y-4 text-gray-500 font-light leading-relaxed text-sm mb-8">
-                <p>When we receive a complaint about a community dog, we do not simply remove the dog. That would be both illegal and ineffective—new dogs would quickly take over the territory.</p>
-                <p>Instead, we take a thoughtful, humane approach that addresses the root cause of the problem while respecting the rights of both the community and the dogs.</p>
-                <p>Our trained team visits the location, observes the dog's behavior, talks to residents, and develops a solution that works for everyone.</p>
+                <p>We work towards creating a safe and balanced environment for both community dogs and society residents.Our approach focuses on vaccination, medical care, shelter support, and peaceful conflict resolution — without harming or illegally relocating any dog</p>
+                <p>We believe that long-term solutions come through awareness, medical support, and responsible community coordination.</p>
+                {/* <p>Our trained team visits the location, observes the dog's behavior, talks to residents, and develops a solution that works for everyone.</p> */}
               </div>
               <div className="space-y-1">
                 {approachChecks.map((c, i) => (
@@ -802,7 +850,7 @@ const DogProblemResolutionPage = () => {
       </section>
 
       {/* ── RESOLUTION PROCESS ───────────────────────────────────────────── */}
-      <section className="py-24 bg-white relative" ref={processRef.ref}>
+      {/* <section className="py-24 bg-white relative" ref={processRef.ref}>
         <div className="max-w-7xl mx-auto px-6 md:px-14">
           <div className={`text-center mb-16 rev ${processRef.visible ? 'in' : ''}`}>
             <span className="inline-block text-[#f97316] font-black text-xs uppercase tracking-widest mb-3 px-3 py-1 bg-orange-50 rounded-full border border-orange-100">Our Process</span>
@@ -815,7 +863,7 @@ const DogProblemResolutionPage = () => {
             {resolutionProcess.map((item) => <ProcessCard key={item.step} {...item} />)}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── TIPS SECTION ─────────────────────────────────────────────────── */}
       <section className="py-24 relative overflow-hidden" ref={tipsRef.ref} style={{ background: 'linear-gradient(140deg,#001628 0%,#002b5c 100%)' }}>

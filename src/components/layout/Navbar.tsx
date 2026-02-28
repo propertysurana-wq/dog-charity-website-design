@@ -1265,6 +1265,314 @@
 
 
 
+// import React, { useState, useEffect } from 'react';
+// import { Link, useLocation } from 'react-router-dom';
+// import { Menu, X, Phone, ChevronDown, Heart } from 'lucide-react';
+
+// const navItems = [
+//   {
+//     label: 'About',
+//     href: '/about-us',
+//     children: [
+//       { label: 'Mission & Vision', href: '/mission-vision' },
+//       { label: 'Who We Are', href: '/who-we-are' },
+//       { label: 'Gallery', href: '/gallery' },
+//     ],
+//   },
+//   {
+//     label: 'Problems We Resolved',
+//     href: '/our-work/dog-problem-resolution',
+//   },
+//   {
+//     label: 'Our Work',
+//     href: '/our-work',
+//     children: [
+//       { label: 'What We Do', href: '/what-we-do' },
+//       { label: 'Our Work Overview', href: '/our-work' },
+//       { label: 'Injury & Medical Care', href: '/our-work/injury-medical-care' },
+//       { label: 'Vaccination Programs', href: '/our-work/vaccination-programs' },
+//     ],
+//   },
+//   {
+//     label: 'Shelter & Safe Care',
+//     href: '/shelter-safe-care',
+//   },
+//   {
+//     label: 'Become Volunteer',
+//     href: '/get-involved',
+//   },
+//   {
+//     label: 'Contact',
+//     href: '/contact-us',
+//   },
+// ];
+
+// const Navbar: React.FC = () => {
+//   const [isOpen, setIsOpen] = useState(false);
+//   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+//   const location = useLocation();
+
+//   useEffect(() => {
+//     setIsOpen(false);
+//     setActiveDropdown(null);
+//   }, [location.pathname]);
+
+//   const toggleDropdown = (label: string) => {
+//     setActiveDropdown(activeDropdown === label ? null : label);
+//   };
+
+//   return (
+//     <header
+//       className="fixed top-0 left-0 right-0 z-50  w-full bg-white shadow-md w-full bg-white shadow-md"
+//       style={{ fontFamily: "'Poppins', sans-serif" }}
+//     >
+//       {/* Google Fonts */}
+//       <link
+//         href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Poppins:wght@400;500;600;700&display=swap"
+//         rel="stylesheet"
+//       />
+
+//       {/* Top Bar */}
+//       <div className="bg-gray-900 text-white py-1.5 hidden md:block">
+//         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+//           <div className="flex items-center justify-between text-xs">
+//             <div className="flex items-center gap-4">
+              
+//                <a  href="tel:+919876543210"
+//                 className="flex items-center gap-1.5 hover:text-yellow-400 transition-colors font-medium"
+//               >
+//                 <Phone size={12} />
+//                 <span>Emergency: +91 98765 43210</span>
+//               </a>
+//               <span className="text-gray-500">|</span>
+//               <span className="text-gray-300">24/7 Rescue Helpline</span>
+//             </div>
+//             <div>
+//               <Link
+//                 to="/donate"
+//                 className="flex items-center gap-1.5 bg-yellow-400 hover:bg-yellow-300 text-gray-900 px-4 py-1 rounded-full font-bold text-xs transition-all duration-300 shadow-sm"
+//               >
+//                 <Heart size={12} className="text-red-600" />
+//                 Donate Now
+//               </Link>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* Main Navigation */}
+//       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+//         <div className="flex items-center justify-between h-20 md:h-24">
+
+//           {/* ✅ LOGO - Image version */}
+//           <Link to="/" aria-label="Suranango for Dogs Home" className="flex items-center gap-3">
+//             {/* 
+//               👇 Apna logo image path yahan rakho
+//               Agar public folder mein hai → src="/logo.png"
+//               Agar src/assets mein hai  → import logoImg from '../assets/logo.png' upar karke → src={logoImg}
+//             */}
+//             <img
+//               src="image/doglogo.png"
+//               alt="Suranango for Dogs Logo"
+//               className="h-19 w-auto object-contain"
+//             />
+//           </Link>
+
+//           {/* Desktop Navigation */}
+//           <div className="hidden lg:flex items-center gap-1">
+//             {navItems.map((item) => (
+//               <div key={item.label} className="relative">
+//                 {item.children ? (
+//                   <button
+//                     className={`flex items-center gap-1 px-3 py-2 rounded-lg text-xs font-semibold transition-all duration-200 ${
+//                       location.pathname.startsWith(item.href)
+//                         ? 'text-yellow-600 bg-yellow-50'
+//                         : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+//                     }`}
+//                     onMouseEnter={() => setActiveDropdown(item.label)}
+//                     onMouseLeave={() => setActiveDropdown(null)}
+//                     aria-expanded={activeDropdown === item.label}
+//                     aria-haspopup="true"
+//                   >
+//                     {item.label}
+//                     <ChevronDown size={12} />
+//                   </button>
+//                 ) : (
+//                   <Link
+//                     to={item.href}
+//                     className={`px-3 py-2 rounded-lg text-xs font-semibold transition-all duration-200 ${
+//                       location.pathname === item.href
+//                         ? 'text-yellow-600 bg-yellow-50'
+//                         : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+//                     }`}
+//                   >
+//                     {item.label}
+//                   </Link>
+//                 )}
+
+//                 {/* Dropdown */}
+//                 {item.children && (
+//                   <div
+//                     className={`absolute top-full left-0 w-56 bg-white rounded-2xl shadow-2xl border border-gray-100 py-2 transition-all duration-200 z-50 ${
+//                       activeDropdown === item.label
+//                         ? 'opacity-100 visible translate-y-1'
+//                         : 'opacity-0 invisible -translate-y-2'
+//                     }`}
+//                     onMouseEnter={() => setActiveDropdown(item.label)}
+//                     onMouseLeave={() => setActiveDropdown(null)}
+//                   >
+//                     {item.children.map((child) => (
+//                       <Link
+//                         key={child.href}
+//                         to={child.href}
+//                         className={`block px-5 py-2.5 text-xs font-medium transition-colors ${
+//                           location.pathname === child.href
+//                             ? 'text-yellow-600 bg-yellow-50'
+//                             : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+//                         }`}
+//                       >
+//                         {child.label}
+//                       </Link>
+//                     ))}
+//                   </div>
+//                 )}
+//               </div>
+//             ))}
+//           </div>
+
+//           {/* Right Side Buttons - Desktop */}
+//           <div className="hidden lg:flex items-center gap-2">
+//             {/* Donate Button */}
+//             <Link
+//               to="/donate"
+//               className="flex items-center gap-1.5 px-5 py-2 rounded-full text-xs font-bold text-gray-900 bg-yellow-400 hover:bg-yellow-300 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg"
+//             >
+//               <Heart size={14} className="text-red-600" />
+//               Donate
+//             </Link>
+
+//             {/* Emergency Button */}
+//             <Link
+//               to="/emergency-contact"
+//               className="flex items-center gap-1.5 px-5 py-2 rounded-full text-xs font-bold text-white bg-red-500 hover:bg-red-600 shadow-md transition-all duration-300 hover:scale-105"
+//             >
+//               <Phone size={14} />
+//               Emergency
+//             </Link>
+//           </div>
+
+//           {/* Mobile Menu Button */}
+//           <button
+//             className="lg:hidden p-2 rounded-xl hover:bg-gray-100 transition-colors"
+//             onClick={() => setIsOpen(!isOpen)}
+//             aria-label="Toggle menu"
+//             aria-expanded={isOpen}
+//           >
+//             {isOpen ? <X size={20} /> : <Menu size={20} />}
+//           </button>
+//         </div>
+
+//         {/* Mobile Navigation */}
+//         <div
+//           className={`lg:hidden overflow-hidden transition-all duration-300 ${
+//             isOpen ? 'max-h-screen pb-6' : 'max-h-0'
+//           }`}
+//         >
+//           <div className="pt-4 border-t border-gray-100">
+
+//             {/* Emergency - Mobile */}
+            
+//                <a href="tel:+919876543210"
+//               className="flex items-center gap-2 px-4 py-3 bg-red-50 text-red-600 rounded-xl mb-4 font-semibold text-sm"
+//             >
+//               <Phone size={16} />
+//               Emergency: +91 98765 43210
+//             </a>
+
+//             {/* Nav Items */}
+//             <div className="space-y-1">
+//               {navItems.map((item) => (
+//                 <div key={item.label}>
+//                   {item.children ? (
+//                     <>
+//                       <button
+//                         className={`w-full flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${
+//                           activeDropdown === item.label
+//                             ? 'bg-yellow-50 text-yellow-600'
+//                             : 'text-gray-700 hover:bg-gray-50'
+//                         }`}
+//                         onClick={() => toggleDropdown(item.label)}
+//                         aria-expanded={activeDropdown === item.label}
+//                       >
+//                         {item.label}
+//                         <ChevronDown
+//                           size={16}
+//                           className={`transition-transform ${
+//                             activeDropdown === item.label ? 'rotate-180' : ''
+//                           }`}
+//                         />
+//                       </button>
+//                       <div
+//                         className={`overflow-hidden transition-all duration-200 ${
+//                           activeDropdown === item.label ? 'max-h-96' : 'max-h-0'
+//                         }`}
+//                       >
+//                         <div className="pl-4 py-1 space-y-1">
+//                           {item.children.map((child) => (
+//                             <Link
+//                               key={child.href}
+//                               to={child.href}
+//                               className={`block px-4 py-2 rounded-lg text-xs font-medium transition-colors ${
+//                                 location.pathname === child.href
+//                                   ? 'text-yellow-600 bg-yellow-50'
+//                                   : 'text-gray-500 hover:text-gray-900 hover:bg-gray-50'
+//                               }`}
+//                             >
+//                               {child.label}
+//                             </Link>
+//                           ))}
+//                         </div>
+//                       </div>
+//                     </>
+//                   ) : (
+//                     <Link
+//                       to={item.href}
+//                       className={`block px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${
+//                         location.pathname === item.href
+//                           ? 'bg-yellow-50 text-yellow-600'
+//                           : 'text-gray-700 hover:bg-gray-50'
+//                       }`}
+//                     >
+//                       {item.label}
+//                     </Link>
+//                   )}
+//                 </div>
+//               ))}
+//             </div>
+
+//             {/* Donate Button - Mobile */}
+//             <div className="mt-6 pt-4 border-t border-gray-100">
+//               <Link
+//                 to="/donate"
+//                 className="flex items-center justify-center gap-2 w-full bg-yellow-400 hover:bg-yellow-300 text-gray-900 py-3 rounded-full text-sm font-bold transition-all duration-300 shadow-md hover:shadow-lg"
+//               >
+//                 <Heart size={16} className="text-red-600" />
+//                 Donate Now
+//               </Link>
+//             </div>
+
+//           </div>
+//         </div>
+//       </nav>
+//     </header>
+//   );
+// };
+
+// export default Navbar;
+
+
+
+
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, ChevronDown, Heart } from 'lucide-react';
@@ -1287,7 +1595,7 @@ const navItems = [
     label: 'Our Work',
     href: '/our-work',
     children: [
-      { label: 'What We Do', href: '/what-we-do' },
+      // { label: 'What We Do', href: '/what-we-do' },
       { label: 'Our Work Overview', href: '/our-work' },
       { label: 'Injury & Medical Care', href: '/our-work/injury-medical-care' },
       { label: 'Vaccination Programs', href: '/our-work/vaccination-programs' },
@@ -1323,8 +1631,9 @@ const Navbar: React.FC = () => {
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50  w-full bg-white shadow-md w-full bg-white shadow-md"
-      style={{ fontFamily: "'Poppins', sans-serif" }}
+      className="fixed top-0 left-0 right-0 z-50 w-full bg-white shadow-md"
+      // ✅ Font size thodi badi — text-sm (14px) se text-base (16px) kar di
+      style={{ fontFamily: "'Poppins', sans-serif", fontSize: '15px' }}
     >
       {/* Google Fonts */}
       <link
@@ -1335,14 +1644,14 @@ const Navbar: React.FC = () => {
       {/* Top Bar */}
       <div className="bg-gray-900 text-white py-1.5 hidden md:block">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between text-xs">
+          <div className="flex items-center justify-between text-sm"> {/* ✅ text-xs → text-sm */}
             <div className="flex items-center gap-4">
-              
-               <a  href="tel:+919876543210"
+              <a
+                href="tel:+919876543210"
                 className="flex items-center gap-1.5 hover:text-yellow-400 transition-colors font-medium"
               >
-                <Phone size={12} />
-                <span>Emergency: +91 98765 43210</span>
+                <Phone size={13} />
+                <span>Emergency: +91 9999999999</span>
               </a>
               <span className="text-gray-500">|</span>
               <span className="text-gray-300">24/7 Rescue Helpline</span>
@@ -1350,9 +1659,9 @@ const Navbar: React.FC = () => {
             <div>
               <Link
                 to="/donate"
-                className="flex items-center gap-1.5 bg-yellow-400 hover:bg-yellow-300 text-gray-900 px-4 py-1 rounded-full font-bold text-xs transition-all duration-300 shadow-sm"
+                className="flex items-center gap-1.5 bg-yellow-400 hover:bg-yellow-300 text-gray-900 px-4 py-1 rounded-full font-bold text-sm transition-all duration-300 shadow-sm" // ✅ text-xs → text-sm
               >
-                <Heart size={12} className="text-red-600" />
+                <Heart size={13} className="text-red-600" />
                 Donate Now
               </Link>
             </div>
@@ -1364,13 +1673,8 @@ const Navbar: React.FC = () => {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 md:h-24">
 
-          {/* ✅ LOGO - Image version */}
+          {/* LOGO */}
           <Link to="/" aria-label="Suranango for Dogs Home" className="flex items-center gap-3">
-            {/* 
-              👇 Apna logo image path yahan rakho
-              Agar public folder mein hai → src="/logo.png"
-              Agar src/assets mein hai  → import logoImg from '../assets/logo.png' upar karke → src={logoImg}
-            */}
             <img
               src="image/doglogo.png"
               alt="Suranango for Dogs Logo"
@@ -1384,7 +1688,7 @@ const Navbar: React.FC = () => {
               <div key={item.label} className="relative">
                 {item.children ? (
                   <button
-                    className={`flex items-center gap-1 px-3 py-2 rounded-lg text-xs font-semibold transition-all duration-200 ${
+                    className={`flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${ // ✅ text-xs → text-sm
                       location.pathname.startsWith(item.href)
                         ? 'text-yellow-600 bg-yellow-50'
                         : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
@@ -1395,12 +1699,12 @@ const Navbar: React.FC = () => {
                     aria-haspopup="true"
                   >
                     {item.label}
-                    <ChevronDown size={12} />
+                    <ChevronDown size={13} />
                   </button>
                 ) : (
                   <Link
                     to={item.href}
-                    className={`px-3 py-2 rounded-lg text-xs font-semibold transition-all duration-200 ${
+                    className={`px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${ // ✅ text-xs → text-sm
                       location.pathname === item.href
                         ? 'text-yellow-600 bg-yellow-50'
                         : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
@@ -1425,7 +1729,7 @@ const Navbar: React.FC = () => {
                       <Link
                         key={child.href}
                         to={child.href}
-                        className={`block px-5 py-2.5 text-xs font-medium transition-colors ${
+                        className={`block px-5 py-2.5 text-sm font-medium transition-colors ${ // ✅ text-xs → text-sm
                           location.pathname === child.href
                             ? 'text-yellow-600 bg-yellow-50'
                             : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
@@ -1445,20 +1749,20 @@ const Navbar: React.FC = () => {
             {/* Donate Button */}
             <Link
               to="/donate"
-              className="flex items-center gap-1.5 px-5 py-2 rounded-full text-xs font-bold text-gray-900 bg-yellow-400 hover:bg-yellow-300 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              className="flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-bold text-gray-900 bg-yellow-400 hover:bg-yellow-300 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg" // ✅ text-xs → text-sm
             >
-              <Heart size={14} className="text-red-600" />
+              <Heart size={15} className="text-red-600" />
               Donate
             </Link>
 
-            {/* Emergency Button */}
-            <Link
-              to="/emergency-contact"
-              className="flex items-center gap-1.5 px-5 py-2 rounded-full text-xs font-bold text-white bg-red-500 hover:bg-red-600 shadow-md transition-all duration-300 hover:scale-105"
+            {/* ✅ "Emergency" → "Call Now" | red → blue color */}
+            <a
+              href="tel:+919876543210"
+              className="flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 shadow-md transition-all duration-300 hover:scale-105" // ✅ Changed
             >
-              <Phone size={14} />
-              Emergency
-            </Link>
+              <Phone size={15} />
+              Call Now
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -1468,7 +1772,7 @@ const Navbar: React.FC = () => {
             aria-label="Toggle menu"
             aria-expanded={isOpen}
           >
-            {isOpen ? <X size={20} /> : <Menu size={20} />}
+            {isOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
 
@@ -1480,13 +1784,13 @@ const Navbar: React.FC = () => {
         >
           <div className="pt-4 border-t border-gray-100">
 
-            {/* Emergency - Mobile */}
-            
-               <a href="tel:+919876543210"
-              className="flex items-center gap-2 px-4 py-3 bg-red-50 text-red-600 rounded-xl mb-4 font-semibold text-sm"
+            {/* ✅ "Emergency" → "Call Now" | red → blue - Mobile */}
+            <a
+              href="tel:+919876543210"
+              className="flex items-center gap-2 px-4 py-3 bg-blue-50 text-blue-600 rounded-xl mb-4 font-semibold text-base" // ✅ Changed color + text-sm → text-base
             >
-              <Phone size={16} />
-              Emergency: +91 98765 43210
+              <Phone size={17} />
+              Call Now: +91 98765 43210
             </a>
 
             {/* Nav Items */}
@@ -1496,7 +1800,7 @@ const Navbar: React.FC = () => {
                   {item.children ? (
                     <>
                       <button
-                        className={`w-full flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${
+                        className={`w-full flex items-center justify-between px-4 py-2.5 rounded-xl text-base font-semibold transition-colors ${ // ✅ text-sm → text-base
                           activeDropdown === item.label
                             ? 'bg-yellow-50 text-yellow-600'
                             : 'text-gray-700 hover:bg-gray-50'
@@ -1506,7 +1810,7 @@ const Navbar: React.FC = () => {
                       >
                         {item.label}
                         <ChevronDown
-                          size={16}
+                          size={17}
                           className={`transition-transform ${
                             activeDropdown === item.label ? 'rotate-180' : ''
                           }`}
@@ -1522,7 +1826,7 @@ const Navbar: React.FC = () => {
                             <Link
                               key={child.href}
                               to={child.href}
-                              className={`block px-4 py-2 rounded-lg text-xs font-medium transition-colors ${
+                              className={`block px-4 py-2 rounded-lg text-sm font-medium transition-colors ${ // ✅ text-xs → text-sm
                                 location.pathname === child.href
                                   ? 'text-yellow-600 bg-yellow-50'
                                   : 'text-gray-500 hover:text-gray-900 hover:bg-gray-50'
@@ -1537,7 +1841,7 @@ const Navbar: React.FC = () => {
                   ) : (
                     <Link
                       to={item.href}
-                      className={`block px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${
+                      className={`block px-4 py-2.5 rounded-xl text-base font-semibold transition-colors ${ // ✅ text-sm → text-base
                         location.pathname === item.href
                           ? 'bg-yellow-50 text-yellow-600'
                           : 'text-gray-700 hover:bg-gray-50'
@@ -1554,9 +1858,9 @@ const Navbar: React.FC = () => {
             <div className="mt-6 pt-4 border-t border-gray-100">
               <Link
                 to="/donate"
-                className="flex items-center justify-center gap-2 w-full bg-yellow-400 hover:bg-yellow-300 text-gray-900 py-3 rounded-full text-sm font-bold transition-all duration-300 shadow-md hover:shadow-lg"
+                className="flex items-center justify-center gap-2 w-full bg-yellow-400 hover:bg-yellow-300 text-gray-900 py-3 rounded-full text-base font-bold transition-all duration-300 shadow-md hover:shadow-lg" // ✅ text-sm → text-base
               >
-                <Heart size={16} className="text-red-600" />
+                <Heart size={17} className="text-red-600" />
                 Donate Now
               </Link>
             </div>

@@ -5281,10 +5281,10 @@ import {
 // ─────────────────────────────────────────────────────────────────────────────
 
 const galleryImages = [
-  { id: 1, src: 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1200&q=85', thumb: 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&h=420&fit=crop', caption: 'Street dogs playing together in Jaipur', category: 'Rescue' },
-  { id: 2, src: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1200&q=85', thumb: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&h=420&fit=crop', caption: 'Bruno — adopted after 3 months in shelter', category: 'Adoption' },
-  { id: 3, src: 'https://images.unsplash.com/photo-1601979031925-424e53b6caaa?w=1200&q=85', thumb: 'https://images.unsplash.com/photo-1601979031925-424e53b6caaa?w=600&h=420&fit=crop', caption: 'Moti recovering after emergency surgery', category: 'Medical' },
-  { id: 4, src: 'https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?w=1200&q=85', thumb: 'https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?w=600&h=420&fit=crop', caption: 'Coco in her forever home — Ajmer', category: 'Adoption' },
+  { id: 1, src: 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1200&q=85', thumb: 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&h=420&fit=crop', caption: 'Injured dog treated after road accident', category: '' },
+  { id: 2, src: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1200&q=85', thumb: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&h=420&fit=crop', caption: 'Mass anti-rabies vaccination drive', category: '' },
+  { id: 3, src: 'https://images.unsplash.com/photo-1601979031925-424e53b6caaa?w=1200&q=85', thumb: 'https://images.unsplash.com/photo-1601979031925-424e53b6caaa?w=600&h=420&fit=crop', caption: 'Puppy safety & mother dog care', category: '' },
+  { id: 4, src: 'https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?w=1200&q=85', thumb: 'https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?w=600&h=420&fit=crop', caption: 'Society conflict resolved peacefully', category: '' },
   { id: 5, src: 'https://images.unsplash.com/photo-1558788353-f76d92427f16?w=1200&q=85', thumb: 'https://images.unsplash.com/photo-1558788353-f76d92427f16?w=600&h=420&fit=crop', caption: 'Community feeding drive — Jodhpur', category: 'Community' },
   { id: 6, src: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=1200&q=85', thumb: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600&h=420&fit=crop', caption: 'Vaccination drive at Udaipur society', category: 'Medical' },
   { id: 7, src: 'https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=1200&q=85', thumb: 'https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=600&h=420&fit=crop', caption: 'Rescue team on field — Bikaner', category: 'Rescue' },
@@ -5726,57 +5726,73 @@ const HomePage = () => {
       `}</style>
 
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      <section className="relative w-full overflow-hidden" style={{background:'#1a2744', minHeight:'480px'}}>
-        {/* Full-bleed dog image on the right half */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1601979031925-424e53b6caaa?w=1400&h=600&fit=crop&q=85"
-            alt="Dog close up"
-            className="w-full h-full object-cover object-center"
-            style={{opacity:0.55}}
-          />
-          {/* Left dark gradient so text is readable */}
-          <div className="absolute inset-0" style={{background:'linear-gradient(90deg, rgba(26,39,68,0.97) 0%, rgba(26,39,68,0.92) 40%, rgba(26,39,68,0.5) 65%, transparent 100%)'}} />
-          {/* Bottom wave */}
-          <div className="absolute bottom-0 left-0 right-0">
-            <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style={{display:'block', width:'100%', height:'70px'}}>
-              <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
-            </svg>
-          </div>
-        </div>
+   <section className="relative w-full overflow-hidden" style={{background:'#1a2744', minHeight:'380px'}}>
+  {/* Full-bleed dog image */}
+  <div className="absolute inset-0 z-0">
+    <img
+      src="https://images.unsplash.com/photo-1601979031925-424e53b6caaa?w=1400&h=600&fit=crop&q=85"
+      alt="Dog close up"
+      className="w-full h-full object-cover object-center"
+      style={{opacity:0.55}}
+    />
+    {/* Gradient — on mobile full dark, on desktop left-to-right */}
+    <div
+      className="absolute inset-0"
+      style={{background:'linear-gradient(180deg, rgba(26,39,68,0.92) 0%, rgba(26,39,68,0.85) 60%, rgba(26,39,68,0.75) 100%)'}}
+    />
+    <div
+      className="absolute inset-0 hidden md:block"
+      style={{background:'linear-gradient(90deg, rgba(26,39,68,0.97) 0%, rgba(26,39,68,0.92) 40%, rgba(26,39,68,0.5) 65%, transparent 100%)'}}
+    />
+    {/* Bottom wave */}
+    <div className="absolute bottom-0 left-0 right-0">
+      <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style={{display:'block', width:'100%', height:'50px'}}>
+        <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </div>
 
-        {/* Content — left aligned like screenshot */}
-        <div className="relative z-10 max-w-7xl mx-auto px-8 md:px-14 flex flex-col justify-center" style={{minHeight:'480px', paddingTop:'60px', paddingBottom:'90px'}}>
-          <div className="max-w-xl">
-            {/* Top label */}
-            <div className="flex items-center gap-2 mb-5">
-              <Heart size={14} fill="#ffd100" className="text-[#ffd100]" />
-              <span className="text-[#ffd100] font-black uppercase tracking-widest text-xs">Giving Every Dog a Loving Home</span>
-            </div>
+  {/* Content */}
+  <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 md:px-14 flex flex-col justify-center"
+    style={{minHeight:'380px', paddingTop:'40px', paddingBottom:'70px'}}>
+    <div className="max-w-xl mx-auto md:mx-0 text-center md:text-left">
 
-            {/* Headline */}
-            <h1 className="display font-black text-white leading-tight mb-5" style={{fontSize:'clamp(2.6rem, 5vw, 4rem)'}}>
-              Every Dog Deserves a<br />Loving Home
-            </h1>
+      {/* Top label */}
+      <div className="flex items-center justify-center md:justify-start gap-2 mb-3">
+        <Heart size={13} fill="#ffd100" className="text-[#ffd100]" />
+        <span className="text-[#ffd100] font-black uppercase tracking-widest text-xs">
+          Giving Every Dog Safety & Care
+        </span>
+      </div>
 
-            {/* Sub text */}
-            <p className="text-slate-300 text-base leading-relaxed mb-8 font-light max-w-md">
-              Based in Rajasthan, India, we've been rescuing and rehoming street dogs since 2010. Find your perfect companion today and give a rescue dog the second chance they deserve.
-            </p>
+      {/* Headline */}
+      <h2 className="font-black text-white leading-tight mb-4"
+        style={{fontSize:'clamp(1.7rem, 4.5vw, 3.5rem)'}}>
+        Humane solutions for dog-related<br className="hidden sm:block" /> issues in society.
+      </h2>
 
-            {/* Buttons — exactly like screenshot */}
-            <div className="flex flex-wrap gap-4 items-center">
-              <a href="/adopt" className="btn-gold inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-bold text-base shadow-lg">
-                Find a Dog <ArrowRight size={18} />
-              </a>
-              <a href="/donate" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-bold text-base border-2 border-[#ffd100] text-[#ffd100] hover:bg-[#ffd100] hover:text-[#002b5c] transition-all duration-300">
-                Donate Today
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Sub text */}
+      <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6 font-light max-w-md mx-auto md:mx-0">
+        Surana Dog NGO works to resolve dog-related issues in societies through vaccination,
+        emergency medical care, shelter support, and legal awareness. We ensure safety for
+        both people and community dogs without relocation or cruelty.
+      </p>
 
+      {/* Buttons */}
+      <div className="flex flex-row gap-3 items-center justify-center md:justify-start">
+        <a href="/contact"
+          className="btn-gold inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-bold text-sm shadow-lg whitespace-nowrap">
+          Contact <ArrowRight size={16} />
+        </a>
+        <a href="/donate"
+          className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-bold text-sm border-2 border-[#ffd100] text-[#ffd100] hover:bg-[#ffd100] hover:text-[#002b5c] transition-all duration-300 whitespace-nowrap">
+          Donate Today
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
       {/* ── MARQUEE TRUST BAR ───────────────────────────────────────────── */}
       {/* <div className="bg-[#ffd100] py-3 overflow-hidden">
         <div className="flex marquee-track whitespace-nowrap gap-0">
@@ -5797,26 +5813,26 @@ const HomePage = () => {
             {[
               {
                 icon: Heart,
-                title: 'Adopt a Dog',
-                desc: 'Give a rescue dog a loving forever home. Browse our dogs waiting for adoption.',
-                link: '/adopt',
+                title: 'Dog Problem Resolution',
+                desc: 'Handling society complaints related to community dogs through humane, legal, and scientific methods',
+                link: '/contact',
                 cta: 'Find your match',
                 bg: '#ffc107',   // yellow like screenshot
                 iconBg: 'rgba(255,255,255,0.25)',
               },
               {
                 icon: HeartPulse,
-                title: 'Donate',
-                desc: 'Your generosity helps us care for dogs and find them loving homes.',
-                link: '/donate',
+                title: 'Emergency & Medical Care',
+                desc: 'Immediate response for injured, sick, or accident-affected dogs with on-site aid or hospital treatment',
+                link: '/contact',
                 cta: 'Make a donation',
                 bg: '#f97316',   // orange
                 iconBg: 'rgba(255,255,255,0.25)',
               },
               {
                 icon: Users,
-                title: 'Volunteer',
-                desc: 'Join our team of dedicated volunteers and help make a difference.',
+                title: 'Vaccination Programs',
+                desc: 'Anti-rabies and core vaccination drives to protect dogs and ensure public safety in communities',
                 link: '/volunteer',
                 cta: 'Get involved',
                 bg: '#0891b2',   // teal
@@ -5824,8 +5840,8 @@ const HomePage = () => {
               },
               {
                 icon: ShieldCheck,
-                title: 'Dog Care Tips',
-                desc: 'Expert advice on training, health, and caring for your furry friend.',
+                title: 'Shelter & Recovery Care',
+                desc: 'Temporary shelter support for injured or recovering dogs under veterinary supervision',
                 link: '/tips',
                 cta: 'Learn more',
                 bg: '#65a30d',   // green
@@ -5877,8 +5893,8 @@ const HomePage = () => {
               <span className="inline-flex items-center gap-2 bg-[#ffd100]/15 text-[#ffd100] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-5 border border-[#ffd100]/20">
                 <Images size={13} /> Photo Stories
               </span>
-              <h2 className="display text-4xl md:text-5xl font-black text-white mb-3">Stories in Frames</h2>
-              <p className="text-blue-300 text-base max-w-md font-light">Every photo is a life changed — rescues, recoveries, and reunions from across Rajasthan.</p>
+              <h2 className="display text-4xl md:text-5xl font-black text-white mb-3">Our Work in Action</h2>
+              <p className="text-blue-300 text-base max-w-md font-light">Real moments from our field work — rescues, treatments, vaccinations, and community interventions across Rajasthan</p>
             </div>
             <a href="/gallery" className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[#ffd100]/50 text-[#ffd100] font-semibold text-sm hover:bg-[#ffd100] hover:text-[#002b5c] transition-all duration-300 backdrop-blur-sm">
               Full Gallery <ExternalLink size={15} />
@@ -5931,7 +5947,7 @@ const HomePage = () => {
               Solutions for<br />
               <span className="italic font-light">Societies & RWAs</span>
             </h2>
-            <p className="text-gray-500 text-lg max-w-2xl mx-auto font-light">Conflict resolution through scientific and legal methods. <strong className="text-[#002b5c] font-bold">Sterilization & Vaccination</strong> is the only humane answer.</p>
+            <p className="text-gray-500 text-lg max-w-2xl mx-auto font-light">We help societies manage dog-related concerns without fear or illegal actions.<strong className="text-[#002b5c] font-bold">Our approach focuses on awareness, vaccination</strong> medical care, and cooperation.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 items-stretch">
@@ -5981,7 +5997,7 @@ const HomePage = () => {
               <p className="text-gray-500 text-lg font-light mb-10">Here's exactly what to do — we respond within 45 minutes.</p>
               <div className="space-y-8">
                 {[
-                  { num: '01', title: 'Share Location', desc: 'WhatsApp us a video and Google Location pin.' },
+                  { num: '01', title: 'Share Location', desc: 'Send photo/video + Google map location on WhatsApp.' },
                   { num: '02', title: 'Triage', desc: 'Our vet assesses urgency. Ambulance dispatched for critical cases.' },
                   { num: '03', title: 'Treatment', desc: 'On-spot aid for minor wounds; Admission for surgeries.' },
                 ].map((step) => (
@@ -6053,8 +6069,8 @@ const HomePage = () => {
             </div>
 
             <div className="bg-white text-[#002b5c] p-10 rounded-[2.5rem] shadow-2xl relative overflow-hidden">
-              <div className="pointer-events-none absolute top-0 right-0 w-40 h-40 opacity-5" style={{background:'radial-gradient(circle, #ffd100, transparent)'}} />
-              <div className="absolute -top-3 -right-3 bg-[#ffd100] text-[#002b5c] font-black px-4 py-2 rounded-xl shadow-lg text-xs uppercase tracking-wider rotate-6">PDF Guide</div>
+              {/* <div className="pointer-events-none absolute top-0 right-0 w-40 h-40 opacity-5" style={{background:'radial-gradient(circle, #ffd100, transparent)'}} /> */}
+              {/* <div className="absolute -top-3 -right-3 bg-[#ffd100] text-[#002b5c] font-black px-4 py-2 rounded-xl shadow-lg text-xs uppercase tracking-wider rotate-6">PDF Guide</div> */}
               <h3 className="display text-2xl font-black mb-8">Responsible Community Living</h3>
               <ul className="space-y-5">
                 {['Designate feeding spots away from high footfall areas.','Ensure all dogs are sterilized & vaccinated (ABC).','Do not act aggressive; dogs react to fear.','Cooperate with authorized feeders.'].map((item, i) => (
@@ -6080,14 +6096,14 @@ const HomePage = () => {
         </div>
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <p className="font-black text-[#002b5c]/50 uppercase tracking-widest text-xs mb-4">Make an Impact</p>
-          <h2 className="display text-4xl md:text-6xl font-black text-[#002b5c] mb-6 leading-tight">We Run on<br /><span className="italic font-light">Compassion</span></h2>
-          <p className="text-[#002b5c]/70 text-lg mb-12 font-light max-w-2xl mx-auto leading-relaxed">We do not sell dogs. We do not charge for rescues. Your donation buys bandages, vaccines, and food for the voiceless.</p>
+          <h2 className="display text-4xl md:text-6xl font-black text-[#002b5c] mb-6 leading-tight">Facing Dog-Related <br /><span className="italic font-light">Problems in Your Area?</span></h2>
+          <p className="text-[#002b5c]/70 text-lg mb-12 font-light max-w-2xl mx-auto leading-relaxed">If your society is facing any issue with community dogs, contact Surana Dog NGO. Our team will reach, assess, and resolve the situation responsibly</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="/donate" className="bg-[#002b5c] text-white px-10 py-5 rounded-2xl font-bold text-base hover:bg-[#001a3d] shadow-2xl shadow-[#002b5c]/30 transition-all hover:-translate-y-1">
-              Donate Now
+            <a href="/contact" className="bg-[#002b5c] text-white px-10 py-5 rounded-2xl font-bold text-base hover:bg-[#001a3d] shadow-2xl shadow-[#002b5c]/30 transition-all hover:-translate-y-1">
+              Contact Us
             </a>
-            <a href="/volunteer" className="bg-white/40 border-2 border-[#002b5c] text-[#002b5c] px-10 py-5 rounded-2xl font-bold text-base hover:bg-[#002b5c] hover:text-white hover:border-[#002b5c] transition-all hover:-translate-y-1 backdrop-blur-sm">
-              Become a Volunteer
+            <a href="/contact" className="bg-white/40 border-2 border-[#002b5c] text-[#002b5c] px-10 py-5 rounded-2xl font-bold text-base hover:bg-[#002b5c] hover:text-white hover:border-[#002b5c] transition-all hover:-translate-y-1 backdrop-blur-sm">
+              Report a Problem
             </a>
           </div>
         </div>
