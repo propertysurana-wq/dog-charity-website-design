@@ -650,7 +650,7 @@ const GetInvolvedPage: React.FC = () => {
                   <div className="gi-fgrid">
                     <div className="gi-fr2">
                       <div className="gi-fld">
-                        <label><img src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=40&h=40&fit=crop" alt="" />Poora Naam <span className="req">*</span></label>
+                        <label><img src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=40&h=40&fit=crop" alt="" />Name <span className="req">*</span></label>
                         <input name="fullName" value={formData.fullName} onChange={handleChange} placeholder=" Naam" className={`gi-inp ${errors.fullName?'er':''}`} />
                         {errors.fullName && <span className="gi-em">⚠ {errors.fullName}</span>}
                       </div>
