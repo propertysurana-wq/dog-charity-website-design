@@ -208,7 +208,7 @@ const Footer: React.FC = () => {
     ],
     // Navbar: Our Work dropdown
     'Our Work': [
-      { label: 'What We Do',            path: '/what-we-do' },
+   
       { label: 'Our Work Overview',     path: '/our-work' },
       { label: 'Injury & Medical Care', path: '/our-work/injury-medical-care' },
       { label: 'Vaccination Programs',  path: '/our-work/vaccination-programs' },

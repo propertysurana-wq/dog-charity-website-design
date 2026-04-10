@@ -551,7 +551,7 @@ const HomePage = () => {
               icon: Heart,
               title: 'Dog Problem Resolution',
               desc: 'Handling society complaints related to community dogs through humane, legal, and scientific methods',
-              link: '/contact',
+            
               cta: 'Find your match',
               bg: '#ffc107',
               img: '/image/Streetdog.jpeg',
@@ -560,7 +560,7 @@ const HomePage = () => {
               icon: HeartPulse,
               title: 'Emergency & Medical Care',
               desc: 'Immediate response for injured, sick, or accident-affected dogs with on-site aid or hospital treatment',
-              link: '/contact',
+             
               cta: 'Make a donation',
               bg: '#f97316',
               img: '/image/Animal.jpeg',
@@ -569,7 +569,7 @@ const HomePage = () => {
               icon: Users,
               title: 'Vaccination Programs',
               desc: 'Anti-rabies and core vaccination drives to protect dogs and ensure public safety in communities',
-              link: '/volunteer',
+             
               cta: 'Get involved',
               bg: '#0891b2',
               img: '/image/Vaccination.jpeg',
@@ -578,7 +578,7 @@ const HomePage = () => {
               icon: ShieldCheck,
               title: 'Shelter & Recovery Care',
               desc: 'Temporary shelter support for injured or recovering dogs under veterinary supervision',
-              link: '/tips',
+             
               cta: 'Learn more',
               bg: '#65a30d',
               img: '/image/Animalrescue.jpeg',
@@ -851,7 +851,7 @@ const HomePage = () => {
             <a href="/contact" className="bg-[#002b5c] text-white px-10 py-5 rounded-2xl font-bold text-base hover:bg-[#001a3d] shadow-2xl shadow-[#002b5c]/30 transition-all hover:-translate-y-1">
               Contact Us
             </a>
-            <a href="/contact" className="bg-white/40 border-2 border-[#002b5c] text-[#002b5c] px-10 py-5 rounded-2xl font-bold text-base hover:bg-[#002b5c] hover:text-white hover:border-[#002b5c] transition-all hover:-translate-y-1 backdrop-blur-sm">
+            <a href="/contact-us" className="bg-white/40 border-2 border-[#002b5c] text-[#002b5c] px-10 py-5 rounded-2xl font-bold text-base hover:bg-[#002b5c] hover:text-white hover:border-[#002b5c] transition-all hover:-translate-y-1 backdrop-blur-sm">
               Report a Problem
             </a>
           </div>

@@ -745,7 +745,7 @@ const DogProblemResolutionPage = () => {
           className="btn-gold inline-flex items-center gap-2 px-5 sm:px-7 py-3 rounded-2xl font-bold shadow-xl text-sm sm:text-base whitespace-nowrap">
           <Phone size={15} /> Call Us Now
         </a>
-        <Link to="/contact"
+        <Link to="/contact-us"
           className="btn-outline-w inline-flex items-center gap-2 px-5 sm:px-7 py-3 rounded-2xl font-bold border-2 border-white/30 text-white text-sm sm:text-base whitespace-nowrap">
           Submit Complaint <ArrowRight size={15} />
         </Link>
@@ -951,7 +951,7 @@ const DogProblemResolutionPage = () => {
                 <a href="tel:+919876543210" className="inline-flex items-center justify-center gap-2 bg-[#002b5c] text-white px-7 py-4 rounded-2xl font-bold shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
                   <Phone size={17} className="text-[#ffd100]" /> +919999999999
                 </a>
-                <Link to="/contact" className="inline-flex items-center justify-center gap-2 bg-white/50 border-2 border-[#002b5c] text-[#002b5c] px-7 py-4 rounded-2xl font-bold hover:bg-[#002b5c] hover:text-white transition-all duration-300">
+                <Link to="/contact-us" className="inline-flex items-center justify-center gap-2 bg-white/50 border-2 border-[#002b5c] text-[#002b5c] px-7 py-4 rounded-2xl font-bold hover:bg-[#002b5c] hover:text-white transition-all duration-300">
                   <FileText size={17} /> Submit Complaint
                 </Link>
               </div>
