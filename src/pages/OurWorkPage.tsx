@@ -459,7 +459,11 @@ const OurWorkPage: React.FC = () => {
 const workAreas = [
   {
     id: 'dog-problem-resolution',
+<<<<<<< HEAD
     img: '/image/Streetdogcare.png',
+=======
+    img: 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&h=300&fit=crop',
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
     title: 'Dog Issue Resolution',
     description:
       'Humane and lawful resolution of dog-related complaints while ensuring safety for both residents and community dogs.',
@@ -475,7 +479,11 @@ const workAreas = [
   },
   {
     id: 'injury-medical-care',
+<<<<<<< HEAD
     img: '/image/Streetreceives.png',
+=======
+    img: 'https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?w=400&h=300&fit=crop',
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
     title: 'Injury & Emergency Care',
     description:
       'Immediate rescue and medical treatment for injured or sick community dogs including road accident cases.',
@@ -491,7 +499,11 @@ const workAreas = [
   },
   {
     id: 'vaccination-programs',
+<<<<<<< HEAD
     img: '/image/Vaccinationdrive.jpeg',
+=======
+    img: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=300&fit=crop',
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
     title: 'Vaccination Programs',
     description:
       'Regular anti-rabies and preventive vaccination drives to protect community dogs and ensure public safety.',
@@ -507,7 +519,11 @@ const workAreas = [
   },
   {
     id: 'shelter-support',
+<<<<<<< HEAD
     img: '/image/shealterimg.png',
+=======
+    img: 'https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=400&h=300&fit=crop',
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
     title: 'Shelter & Recovery Support',
     description:
       'Safe temporary shelter for injured, sick, or recovering dogs with proper care and monitoring.',
@@ -771,7 +787,41 @@ const workAreas = [
       </section>
 
       {/* ── CTA ── */}
+<<<<<<< HEAD
     
+=======
+      <section className="py-16 lg:py-20 bg-gradient-to-r from-[#FFD100] to-[#F58220]">
+        <div className="container mx-auto px-4 text-center">
+          {/* Dog image */}
+          <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-6 ring-4 ring-white shadow-lg">
+            <img
+              src="https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=80&h=80&fit=crop"
+              alt="Support our mission"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#002B5C] mb-4">Support Our Mission</h2>
+          <p className="text-[#002B5C]/80 text-lg mb-8 max-w-2xl mx-auto font-semibold">
+            Your support helps us continue our life-saving work for community dogs.
+            Every contribution makes a difference.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/donate"
+              className="cta-link inline-flex items-center justify-center px-8 py-4 bg-[#002B5C] text-white font-bold rounded-xl text-lg"
+            >
+              ❤️ Donate Now
+            </Link>
+            <Link
+              to="/community-support"
+              className="cta-link inline-flex items-center justify-center px-8 py-4 bg-white text-[#002B5C] font-bold rounded-xl text-lg"
+            >
+              Get Community Support
+            </Link>
+          </div>
+        </div>
+      </section>
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
     </div>
   );
 };

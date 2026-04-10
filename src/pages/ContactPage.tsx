@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import React, { useState } from 'react';
 // import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from 'lucide-react';
 // import { Button } from '@/components/ui/Button';
@@ -297,14 +298,26 @@
 // export default ContactPage;
 
 
+=======
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { orgInfo } from '@/constants/theme';
 
+<<<<<<< HEAD
 const ContactPage: React.FC = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+=======
+/**
+ * ContactPage Component
+ * Contact information and enquiry form
+ */
+
+const ContactPage: React.FC = () => {
+  const [formSubmitted, setFormSubmitted] = useState(false);
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -313,12 +326,22 @@ const ContactPage: React.FC = () => {
     message: '',
   });
 
+<<<<<<< HEAD
+=======
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Simulate form submission
+    setFormSubmitted(true);
+  };
+
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+<<<<<<< HEAD
   // ── API Call ────────────────────────────────────────────────────────────────
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -352,6 +375,8 @@ const ContactPage: React.FC = () => {
   };
   // ───────────────────────────────────────────────────────────────────────────
 
+=======
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
   const contactInfo = [
     {
       icon: <Phone className="w-6 h-6" />,
@@ -418,7 +443,14 @@ const ContactPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 -mt-20">
             {contactInfo.map((item, index) => (
+<<<<<<< HEAD
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg text-center">
+=======
+              <div
+                key={index}
+                className="bg-white p-6 rounded-xl shadow-lg text-center"
+              >
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
                 <div className="w-14 h-14 bg-[#FFD100] rounded-full flex items-center justify-center mx-auto mb-4 text-[#002B5C]">
                   {item.icon}
                 </div>
@@ -435,7 +467,10 @@ const ContactPage: React.FC = () => {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
             {/* Form */}
             <div>
               <h2 className="text-3xl font-bold text-[#002B5C] mb-6">
@@ -446,7 +481,11 @@ const ContactPage: React.FC = () => {
                 <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
                   <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-green-800 mb-2">
+<<<<<<< HEAD
                     Message Sent Successfully! 🎉
+=======
+                    Message Sent Successfully!
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
                   </h3>
                   <p className="text-green-700">
                     Thank you for contacting us. We'll get back to you within 24 hours.
@@ -454,10 +493,14 @@ const ContactPage: React.FC = () => {
                   <Button
                     variant="outline"
                     className="mt-4"
+<<<<<<< HEAD
                     onClick={() => {
                       setFormSubmitted(false);
                       setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
                     }}
+=======
+                    onClick={() => setFormSubmitted(false)}
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
                   >
                     Send Another Message
                   </Button>
@@ -466,23 +509,55 @@ const ContactPage: React.FC = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
+<<<<<<< HEAD
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                         Your Name *
                       </label>
                       <input
                         type="text" id="name" name="name" required
                         value={formData.name} onChange={handleChange}
+=======
+                      <label
+                        htmlFor="name"
+                        className="block text-sm font-medium text-gray-700 mb-1"
+                      >
+                        Your Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        value={formData.name}
+                        onChange={handleChange}
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FFD100] focus:border-transparent"
                         placeholder="John Smith"
                       />
                     </div>
                     <div>
+<<<<<<< HEAD
                       <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                         Email Address *
                       </label>
                       <input
                         type="email" id="email" name="email" required
                         value={formData.email} onChange={handleChange}
+=======
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-medium text-gray-700 mb-1"
+                      >
+                        Email Address *
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        value={formData.email}
+                        onChange={handleChange}
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FFD100] focus:border-transparent"
                         placeholder="john@example.com"
                       />
@@ -491,6 +566,7 @@ const ContactPage: React.FC = () => {
 
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
+<<<<<<< HEAD
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
                         Phone Number
                       </label>
@@ -508,6 +584,37 @@ const ContactPage: React.FC = () => {
                       <select
                         id="subject" name="subject" required
                         value={formData.subject} onChange={handleChange}
+=======
+                      <label
+                        htmlFor="phone"
+                        className="block text-sm font-medium text-gray-700 mb-1"
+                      >
+                        Phone Number
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FFD100] focus:border-transparent"
+                        placeholder="07123 456789"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        htmlFor="subject"
+                        className="block text-sm font-medium text-gray-700 mb-1"
+                      >
+                        Subject *
+                      </label>
+                      <select
+                        id="subject"
+                        name="subject"
+                        required
+                        value={formData.subject}
+                        onChange={handleChange}
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FFD100] focus:border-transparent bg-white"
                       >
                         <option value="">Select a subject</option>
@@ -521,17 +628,34 @@ const ContactPage: React.FC = () => {
                   </div>
 
                   <div>
+<<<<<<< HEAD
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                       Your Message *
                     </label>
                     <textarea
                       id="message" name="message" required rows={6}
                       value={formData.message} onChange={handleChange}
+=======
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                      Your Message *
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      required
+                      rows={6}
+                      value={formData.message}
+                      onChange={handleChange}
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FFD100] focus:border-transparent resize-none"
                       placeholder="How can we help you?"
                     />
                   </div>
 
+<<<<<<< HEAD
                   {/* Submit button with loading state */}
                   <button
                     type="submit"
@@ -553,6 +677,16 @@ const ContactPage: React.FC = () => {
                       </>
                     )}
                   </button>
+=======
+                  <Button
+                    type="submit"
+                    variant="primary"
+                    size="lg"
+                    rightIcon={<Send className="w-5 h-5" />}
+                  >
+                    Send Message
+                  </Button>
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
                 </form>
               )}
             </div>
@@ -564,17 +698,32 @@ const ContactPage: React.FC = () => {
               </h2>
               <div className="space-y-4">
                 {faqItems.map((item, index) => (
+<<<<<<< HEAD
                   <details key={index} className="bg-gray-50 rounded-lg group">
                     <summary className="flex items-center justify-between p-4 cursor-pointer font-semibold text-[#002B5C] hover:bg-gray-100 rounded-lg">
                       {item.question}
                       <span className="text-[#FFD100] group-open:rotate-180 transition-transform">▼</span>
+=======
+                  <details
+                    key={index}
+                    className="bg-gray-50 rounded-lg group"
+                  >
+                    <summary className="flex items-center justify-between p-4 cursor-pointer font-semibold text-[#002B5C] hover:bg-gray-100 rounded-lg">
+                      {item.question}
+                      <span className="text-[#FFD100] group-open:rotate-180 transition-transform">
+                        ▼
+                      </span>
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
                     </summary>
                     <p className="px-4 pb-4 text-gray-600">{item.answer}</p>
                   </details>
                 ))}
               </div>
             </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
           </div>
         </div>
       </section>
@@ -593,4 +742,8 @@ const ContactPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default ContactPage;
+=======
+export default ContactPage;
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f

@@ -926,7 +926,11 @@ const WhoWeArePage = () => {
             <div className={`relative rev-l ${story.visible ? 'in' : ''}`}>
               <div className="absolute inset-0 rounded-3xl bg-[#ffd100] translate-x-4 translate-y-4 opacity-80" />
               <div className="story-wrap relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white" style={{ aspectRatio: '5/4' }}>
+<<<<<<< HEAD
                 <img src="/image/Volunteering.jpeg" alt="Dog being cared for" className="w-full h-full object-cover" loading="lazy" />
+=======
+                <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=700&h=560&fit=crop" alt="Dog being cared for" className="w-full h-full object-cover" loading="lazy" />
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
               </div>
               <div className="absolute -bottom-5 -right-5 bg-[#002b5c] px-7 py-5 rounded-2xl shadow-2xl border-4 border-white z-10">
                 <p className="text-[#ffd100] font-black text-3xl leading-none" style={{ fontFamily: "'Playfair Display',serif" }}>14+</p>

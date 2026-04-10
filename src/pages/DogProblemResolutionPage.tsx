@@ -438,32 +438,57 @@ const commonProblems = [
   {
     title: "Injured Street Dogs",
     description: "We rescue injured or sick community dogs and provide immediate medical treatment and recovery support.",
+<<<<<<< HEAD
      img: '/image/Rescueefforts.png',
+=======
+     img: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=280&fit=crop',
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
   },
   {
     title: "Vaccination Support",
     description: "We conduct anti-rabies and health vaccination drives to prevent disease and ensure public safety.",
+<<<<<<< HEAD
      img: '/image/Vaccination.jpeg',
+=======
+     img: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=280&fit=crop',
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
   },
   {
     title: "Excessive Barking Complaints",
     description: "Our team assesses the cause of barking and works on humane behavioral and environmental solutions.",
+<<<<<<< HEAD
      img: '/image/bonkdog.png',
+=======
+     img: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=280&fit=crop',
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
   },
   {
     title: "Aggressive Behavior",
     description: "We investigate aggression issues and take necessary steps like medical checkups or supervision.",
+<<<<<<< HEAD
      img: '/image/dogsandneighborhood.png',
   },
   {
     title: "Abandonment of Pet Dogs",
    description: "Rising cases of pets being left on the streets.",
      img: '/image/Straydogs.png',
+=======
+     img: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=280&fit=crop',
+  },
+  {
+    title: "Dog Fight Situations",
+   description: "We safely handle dog conflicts and reduce territorial fights through proper intervention.",
+     img: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=280&fit=crop',
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
   },
   {
     title: "Community Safety Concerns",
     description: "If residents feel unsafe, we visit the area and provide responsible and legal solutions.",
+<<<<<<< HEAD
      img: '/image/Volunteering.jpeg',
+=======
+     img: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=280&fit=crop',
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
   }
 ];
 
@@ -745,7 +770,11 @@ const DogProblemResolutionPage = () => {
           className="btn-gold inline-flex items-center gap-2 px-5 sm:px-7 py-3 rounded-2xl font-bold shadow-xl text-sm sm:text-base whitespace-nowrap">
           <Phone size={15} /> Call Us Now
         </a>
+<<<<<<< HEAD
         <Link to="/contact-us"
+=======
+        <Link to="/contact"
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
           className="btn-outline-w inline-flex items-center gap-2 px-5 sm:px-7 py-3 rounded-2xl font-bold border-2 border-white/30 text-white text-sm sm:text-base whitespace-nowrap">
           Submit Complaint <ArrowRight size={15} />
         </Link>
@@ -816,17 +845,30 @@ const DogProblemResolutionPage = () => {
             {/* Right — What We Do NOT Do */}
             <div className={`rev-r ${approachRef.visible ? 'in' : ''}`}>
               {/* Approach photo */}
+<<<<<<< HEAD
               <div className="approach-img-wrap relative rounded-3xl overflow-hidden shadow-2xl mb-8 border-4 border-white" style={{ height: '540px' }}>
                 <img src="/image/Humanesolutions.png" alt="Team assessing dog" className="w-full h-full object-cover" loading="lazy" />
                 <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(0,43,92,0.5) 0%, transparent 60%)' }} />
                 <div className="absolute bottom-5 left-6">
                   {/* <p className="text-white font-black text-lg" style={{ fontFamily: "'Playfair Display',serif" }}>Professional On-Site Team</p>
                   <p className="text-blue-200 text-xs font-light">Trained & Certified Handlers</p> */}
+=======
+              <div className="approach-img-wrap relative rounded-3xl overflow-hidden shadow-2xl mb-8 border-4 border-white" style={{ height: '240px' }}>
+                <img src="https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=700&h=320&fit=crop" alt="Team assessing dog" className="w-full h-full object-cover" loading="lazy" />
+                <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(0,43,92,0.5) 0%, transparent 60%)' }} />
+                <div className="absolute bottom-5 left-6">
+                  <p className="text-white font-black text-lg" style={{ fontFamily: "'Playfair Display',serif" }}>Professional On-Site Team</p>
+                  <p className="text-blue-200 text-xs font-light">Trained & Certified Handlers</p>
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
                 </div>
               </div>
 
               {/* Don't do box */}
+<<<<<<< HEAD
               {/* <div className="bg-white rounded-3xl shadow-xl p-7 border-2 border-rose-100">
+=======
+              <div className="bg-white rounded-3xl shadow-xl p-7 border-2 border-rose-100">
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-10 h-10 bg-rose-100 rounded-xl flex items-center justify-center">
                     <XCircle size={22} className="text-rose-500" />
@@ -843,7 +885,11 @@ const DogProblemResolutionPage = () => {
                     </div>
                   ))}
                 </div>
+<<<<<<< HEAD
               </div> */}
+=======
+              </div>
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
             </div>
           </div>
         </div>
@@ -884,7 +930,11 @@ const DogProblemResolutionPage = () => {
             {/* Behavior tip card */}
             <div className="tip-card rounded-3xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm">
               <div className="tip-img-wrap" style={{ height: '180px' }}>
+<<<<<<< HEAD
                 <img src="/image/Sleepingdog.png" alt="Understanding dog behavior" className="tip-img w-full h-full object-cover" loading="lazy" />
+=======
+                <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600&h=240&fit=crop" alt="Understanding dog behavior" className="tip-img w-full h-full object-cover" loading="lazy" />
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
               </div>
               <div className="p-7">
                 <h3 className="font-black text-white mb-5 text-lg" style={{ fontFamily: "'Playfair Display',serif" }}>
@@ -906,7 +956,11 @@ const DogProblemResolutionPage = () => {
             {/* How you can help card */}
             <div className="tip-card rounded-3xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm">
               <div className="tip-img-wrap" style={{ height: '180px' }}>
+<<<<<<< HEAD
                 <img src="/image/Soulfulstare.png" alt="How you can help dogs" className="tip-img w-full h-full object-cover" loading="lazy" />
+=======
+                <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=600&h=240&fit=crop" alt="How you can help dogs" className="tip-img w-full h-full object-cover" loading="lazy" />
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
               </div>
               <div className="p-7">
                 <h3 className="font-black text-white mb-5 text-lg" style={{ fontFamily: "'Playfair Display',serif" }}>
@@ -951,18 +1005,31 @@ const DogProblemResolutionPage = () => {
                 <a href="tel:+919876543210" className="inline-flex items-center justify-center gap-2 bg-[#002b5c] text-white px-7 py-4 rounded-2xl font-bold shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
                   <Phone size={17} className="text-[#ffd100]" /> +919999999999
                 </a>
+<<<<<<< HEAD
                 <Link to="/contact-us" className="inline-flex items-center justify-center gap-2 bg-white/50 border-2 border-[#002b5c] text-[#002b5c] px-7 py-4 rounded-2xl font-bold hover:bg-[#002b5c] hover:text-white transition-all duration-300">
+=======
+                <Link to="/contact" className="inline-flex items-center justify-center gap-2 bg-white/50 border-2 border-[#002b5c] text-[#002b5c] px-7 py-4 rounded-2xl font-bold hover:bg-[#002b5c] hover:text-white transition-all duration-300">
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
                   <FileText size={17} /> Submit Complaint
                 </Link>
               </div>
             </div>
             {/* Image */}
+<<<<<<< HEAD
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white" style={{ height: '450px' }}>
               <img src="/image/Dogenjoying.png" alt="Helping a dog" className="w-full h-full object-cover" loading="lazy" />
               <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(0,43,92,0.5) 0%, transparent 50%)' }} />
               <div className="absolute bottom-5 left-6">
                 {/* <p className="text-white font-black" style={{ fontFamily: "'Playfair Display',serif" }}>24-Hour Response</p> */}
                 {/* <p className="text-blue-200 text-xs font-light">We visit your location fast</p> */}
+=======
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white" style={{ height: '300px' }}>
+              <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16?w=600&h=400&fit=crop" alt="Helping a dog" className="w-full h-full object-cover" loading="lazy" />
+              <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(0,43,92,0.5) 0%, transparent 50%)' }} />
+              <div className="absolute bottom-5 left-6">
+                <p className="text-white font-black" style={{ fontFamily: "'Playfair Display',serif" }}>24-Hour Response</p>
+                <p className="text-blue-200 text-xs font-light">We visit your location fast</p>
+>>>>>>> 6f3fe6e1e72f671646028408d5774063ddc83c7f
               </div>
             </div>
           </div>
